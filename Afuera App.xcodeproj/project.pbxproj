@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2FED4C9A25FA76610016213D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4C9925FA76610016213D /* AppDelegate.swift */; };
+		2FED4C9C25FA76610016213D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4C9B25FA76610016213D /* SceneDelegate.swift */; };
+		2FED4C9E25FA76610016213D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4C9D25FA76610016213D /* ContentView.swift */; };
+		2FED4CA025FA76630016213D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FED4C9F25FA76630016213D /* Assets.xcassets */; };
+		2FED4CA325FA76630016213D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FED4CA225FA76630016213D /* Preview Assets.xcassets */; };
+		2FED4CA625FA76630016213D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FED4CA425FA76630016213D /* LaunchScreen.storyboard */; };
+		2FED4CB125FA76630016213D /* Afuera_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4CB025FA76630016213D /* Afuera_AppTests.swift */; };
+		2FED4CBC25FA76630016213D /* Afuera_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4CBB25FA76630016213D /* Afuera_AppUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2FED4CAD25FA76630016213D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FED4C8E25FA76610016213D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FED4C9525FA76610016213D;
+			remoteInfo = "Afuera App";
+		};
+		2FED4CB825FA76630016213D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2FED4C8E25FA76610016213D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FED4C9525FA76610016213D;
+			remoteInfo = "Afuera App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2FED4C9625FA76610016213D /* Afuera App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Afuera App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FED4C9925FA76610016213D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2FED4C9B25FA76610016213D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2FED4C9D25FA76610016213D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		2FED4C9F25FA76630016213D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2FED4CA225FA76630016213D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2FED4CA525FA76630016213D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2FED4CA725FA76630016213D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FED4CAC25FA76630016213D /* Afuera AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Afuera AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FED4CB025FA76630016213D /* Afuera_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Afuera_AppTests.swift; sourceTree = "<group>"; };
+		2FED4CB225FA76630016213D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FED4CB725FA76630016213D /* Afuera AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Afuera AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FED4CBB25FA76630016213D /* Afuera_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Afuera_AppUITests.swift; sourceTree = "<group>"; };
+		2FED4CBD25FA76630016213D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2FED4C9325FA76610016213D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FED4CA925FA76630016213D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FED4CB425FA76630016213D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2FED4C8D25FA76610016213D = {
+			isa = PBXGroup;
+			children = (
+				2FED4C9825FA76610016213D /* Afuera App */,
+				2FED4CAF25FA76630016213D /* Afuera AppTests */,
+				2FED4CBA25FA76630016213D /* Afuera AppUITests */,
+				2FED4C9725FA76610016213D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2FED4C9725FA76610016213D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2FED4C9625FA76610016213D /* Afuera App.app */,
+				2FED4CAC25FA76630016213D /* Afuera AppTests.xctest */,
+				2FED4CB725FA76630016213D /* Afuera AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2FED4C9825FA76610016213D /* Afuera App */ = {
+			isa = PBXGroup;
+			children = (
+				2FED4C9925FA76610016213D /* AppDelegate.swift */,
+				2FED4C9B25FA76610016213D /* SceneDelegate.swift */,
+				2FED4C9D25FA76610016213D /* ContentView.swift */,
+				2FED4C9F25FA76630016213D /* Assets.xcassets */,
+				2FED4CA425FA76630016213D /* LaunchScreen.storyboard */,
+				2FED4CA725FA76630016213D /* Info.plist */,
+				2FED4CA125FA76630016213D /* Preview Content */,
+			);
+			path = "Afuera App";
+			sourceTree = "<group>";
+		};
+		2FED4CA125FA76630016213D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2FED4CA225FA76630016213D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2FED4CAF25FA76630016213D /* Afuera AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				2FED4CB025FA76630016213D /* Afuera_AppTests.swift */,
+				2FED4CB225FA76630016213D /* Info.plist */,
+			);
+			path = "Afuera AppTests";
+			sourceTree = "<group>";
+		};
+		2FED4CBA25FA76630016213D /* Afuera AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2FED4CBB25FA76630016213D /* Afuera_AppUITests.swift */,
+				2FED4CBD25FA76630016213D /* Info.plist */,
+			);
+			path = "Afuera AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2FED4C9525FA76610016213D /* Afuera App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FED4CC025FA76630016213D /* Build configuration list for PBXNativeTarget "Afuera App" */;
+			buildPhases = (
+				2FED4C9225FA76610016213D /* Sources */,
+				2FED4C9325FA76610016213D /* Frameworks */,
+				2FED4C9425FA76610016213D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Afuera App";
+			productName = "Afuera App";
+			productReference = 2FED4C9625FA76610016213D /* Afuera App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2FED4CAB25FA76630016213D /* Afuera AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FED4CC325FA76630016213D /* Build configuration list for PBXNativeTarget "Afuera AppTests" */;
+			buildPhases = (
+				2FED4CA825FA76630016213D /* Sources */,
+				2FED4CA925FA76630016213D /* Frameworks */,
+				2FED4CAA25FA76630016213D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FED4CAE25FA76630016213D /* PBXTargetDependency */,
+			);
+			name = "Afuera AppTests";
+			productName = "Afuera AppTests";
+			productReference = 2FED4CAC25FA76630016213D /* Afuera AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2FED4CB625FA76630016213D /* Afuera AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FED4CC625FA76630016213D /* Build configuration list for PBXNativeTarget "Afuera AppUITests" */;
+			buildPhases = (
+				2FED4CB325FA76630016213D /* Sources */,
+				2FED4CB425FA76630016213D /* Frameworks */,
+				2FED4CB525FA76630016213D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2FED4CB925FA76630016213D /* PBXTargetDependency */,
+			);
+			name = "Afuera AppUITests";
+			productName = "Afuera AppUITests";
+			productReference = 2FED4CB725FA76630016213D /* Afuera AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2FED4C8E25FA76610016213D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Jacob Lowry (student LM)";
+				TargetAttributes = {
+					2FED4C9525FA76610016213D = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					2FED4CAB25FA76630016213D = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2FED4C9525FA76610016213D;
+					};
+					2FED4CB625FA76630016213D = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 2FED4C9525FA76610016213D;
+					};
+				};
+			};
+			buildConfigurationList = 2FED4C9125FA76610016213D /* Build configuration list for PBXProject "Afuera App" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2FED4C8D25FA76610016213D;
+			productRefGroup = 2FED4C9725FA76610016213D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2FED4C9525FA76610016213D /* Afuera App */,
+				2FED4CAB25FA76630016213D /* Afuera AppTests */,
+				2FED4CB625FA76630016213D /* Afuera AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2FED4C9425FA76610016213D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FED4CA625FA76630016213D /* LaunchScreen.storyboard in Resources */,
+				2FED4CA325FA76630016213D /* Preview Assets.xcassets in Resources */,
+				2FED4CA025FA76630016213D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FED4CAA25FA76630016213D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FED4CB525FA76630016213D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2FED4C9225FA76610016213D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FED4C9A25FA76610016213D /* AppDelegate.swift in Sources */,
+				2FED4C9C25FA76610016213D /* SceneDelegate.swift in Sources */,
+				2FED4C9E25FA76610016213D /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FED4CA825FA76630016213D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FED4CB125FA76630016213D /* Afuera_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2FED4CB325FA76630016213D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2FED4CBC25FA76630016213D /* Afuera_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2FED4CAE25FA76630016213D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FED4C9525FA76610016213D /* Afuera App */;
+			targetProxy = 2FED4CAD25FA76630016213D /* PBXContainerItemProxy */;
+		};
+		2FED4CB925FA76630016213D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2FED4C9525FA76610016213D /* Afuera App */;
+			targetProxy = 2FED4CB825FA76630016213D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2FED4CA425FA76630016213D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2FED4CA525FA76630016213D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2FED4CBE25FA76630016213D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2FED4CBF25FA76630016213D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2FED4CC125FA76630016213D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Afuera App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Afuera App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NewWveComputers.Afuera-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2FED4CC225FA76630016213D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Afuera App/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Afuera App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NewWveComputers.Afuera-App";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2FED4CC425FA76630016213D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Afuera AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NewWveComputers.Afuera-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Afuera App.app/Afuera App";
+			};
+			name = Debug;
+		};
+		2FED4CC525FA76630016213D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Afuera AppTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NewWveComputers.Afuera-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Afuera App.app/Afuera App";
+			};
+			name = Release;
+		};
+		2FED4CC725FA76630016213D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Afuera AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NewWveComputers.Afuera-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Afuera App";
+			};
+			name = Debug;
+		};
+		2FED4CC825FA76630016213D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Afuera AppUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "NewWveComputers.Afuera-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Afuera App";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2FED4C9125FA76610016213D /* Build configuration list for PBXProject "Afuera App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FED4CBE25FA76630016213D /* Debug */,
+				2FED4CBF25FA76630016213D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FED4CC025FA76630016213D /* Build configuration list for PBXNativeTarget "Afuera App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FED4CC125FA76630016213D /* Debug */,
+				2FED4CC225FA76630016213D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FED4CC325FA76630016213D /* Build configuration list for PBXNativeTarget "Afuera AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FED4CC425FA76630016213D /* Debug */,
+				2FED4CC525FA76630016213D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FED4CC625FA76630016213D /* Build configuration list for PBXNativeTarget "Afuera AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2FED4CC725FA76630016213D /* Debug */,
+				2FED4CC825FA76630016213D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 2FED4C8E25FA76610016213D /* Project object */;
+}
