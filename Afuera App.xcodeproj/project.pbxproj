@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,8 @@
 		2FED4CA625FA76630016213D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FED4CA425FA76630016213D /* LaunchScreen.storyboard */; };
 		2FED4CB125FA76630016213D /* Afuera_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4CB025FA76630016213D /* Afuera_AppTests.swift */; };
 		2FED4CBC25FA76630016213D /* Afuera_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4CBB25FA76630016213D /* Afuera_AppUITests.swift */; };
+		2FED4CCA26011EE90016213D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FED4CC926011EE80016213D /* GoogleService-Info.plist */; };
+		9104E442B2543AC184D6C4A2 /* Pods_Afuera_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		2FED4CB725FA76630016213D /* Afuera AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Afuera AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FED4CBB25FA76630016213D /* Afuera_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Afuera_AppUITests.swift; sourceTree = "<group>"; };
 		2FED4CBD25FA76630016213D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2FED4CC926011EE80016213D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Afuera_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9BEB820DCDDDBA0E3AB3AE8A /* Pods-Afuera App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afuera App.debug.xcconfig"; path = "Target Support Files/Pods-Afuera App/Pods-Afuera App.debug.xcconfig"; sourceTree = "<group>"; };
+		E6A57448FC4BCFEE0C177FF3 /* Pods-Afuera App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afuera App.release.xcconfig"; path = "Target Support Files/Pods-Afuera App/Pods-Afuera App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9104E442B2543AC184D6C4A2 /* Pods_Afuera_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,8 @@
 				2FED4CAF25FA76630016213D /* Afuera AppTests */,
 				2FED4CBA25FA76630016213D /* Afuera AppUITests */,
 				2FED4C9725FA76610016213D /* Products */,
+				669228334CA1F69BF18365C9 /* Pods */,
+				7E8E90801A091AF0B29D926C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +114,7 @@
 				2FED4C9F25FA76630016213D /* Assets.xcassets */,
 				2FED4CA425FA76630016213D /* LaunchScreen.storyboard */,
 				2FED4CA725FA76630016213D /* Info.plist */,
+				2FED4CC926011EE80016213D /* GoogleService-Info.plist */,
 				2FED4CA125FA76630016213D /* Preview Content */,
 			);
 			path = "Afuera App";
@@ -136,6 +146,23 @@
 			path = "Afuera AppUITests";
 			sourceTree = "<group>";
 		};
+		669228334CA1F69BF18365C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BEB820DCDDDBA0E3AB3AE8A /* Pods-Afuera App.debug.xcconfig */,
+				E6A57448FC4BCFEE0C177FF3 /* Pods-Afuera App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		7E8E90801A091AF0B29D926C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,9 +170,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2FED4CC025FA76630016213D /* Build configuration list for PBXNativeTarget "Afuera App" */;
 			buildPhases = (
+				58E220A5367F4F5949606995 /* [CP] Check Pods Manifest.lock */,
 				2FED4C9225FA76610016213D /* Sources */,
 				2FED4C9325FA76610016213D /* Frameworks */,
 				2FED4C9425FA76610016213D /* Resources */,
+				E5B6811F64A938084EE2A523 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -243,6 +272,7 @@
 				2FED4CA625FA76630016213D /* LaunchScreen.storyboard in Resources */,
 				2FED4CA325FA76630016213D /* Preview Assets.xcassets in Resources */,
 				2FED4CA025FA76630016213D /* Assets.xcassets in Resources */,
+				2FED4CCA26011EE90016213D /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +291,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58E220A5367F4F5949606995 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Afuera App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E5B6811F64A938084EE2A523 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Afuera App/Pods-Afuera App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Afuera App/Pods-Afuera App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Afuera App/Pods-Afuera App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2FED4C9225FA76610016213D /* Sources */ = {
@@ -432,6 +504,7 @@
 		};
 		2FED4CC125FA76630016213D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BEB820DCDDDBA0E3AB3AE8A /* Pods-Afuera App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,6 +524,7 @@
 		};
 		2FED4CC225FA76630016213D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6A57448FC4BCFEE0C177FF3 /* Pods-Afuera App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
