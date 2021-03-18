@@ -13,7 +13,7 @@ struct ContentView: View {
     var body: some View {
         Group{
             if userInfo.isUserAuthenticated == .undefined{
-                Text("Loading")
+                Text("Boading")
             }
             else if userInfo.isUserAuthenticated == .signedOut{
                 LoginView()
