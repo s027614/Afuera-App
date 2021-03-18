@@ -17,6 +17,9 @@
 		2FED4CBC25FA76630016213D /* Afuera_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4CBB25FA76630016213D /* Afuera_AppUITests.swift */; };
 		2FED4CCA26011EE90016213D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FED4CC926011EE80016213D /* GoogleService-Info.plist */; };
 		9104E442B2543AC184D6C4A2 /* Pods_Afuera_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */; };
+		BED8FEDD2602848E00FF405D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEDC2602848E00FF405D /* UserInfo.swift */; };
+		BED8FEDF2602849300FF405D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEDE2602849200FF405D /* UserViewModel.swift */; };
+		BED8FEE3260285F900FF405D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEE2260285F800FF405D /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,15 @@
 		2FED4CC926011EE80016213D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Afuera_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BEB820DCDDDBA0E3AB3AE8A /* Pods-Afuera App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afuera App.debug.xcconfig"; path = "Target Support Files/Pods-Afuera App/Pods-Afuera App.debug.xcconfig"; sourceTree = "<group>"; };
+		BED8FED526027EDE00FF405D /* SignInWithEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailView.swift; sourceTree = "<group>"; };
+		BED8FED626027EDE00FF405D /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
+		BED8FED726027EDE00FF405D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BED8FED926027EDE00FF405D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		BED8FEDA26027EDE00FF405D /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
+		BED8FEDB26027EDE00FF405D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		BED8FEDC2602848E00FF405D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		BED8FEDE2602849200FF405D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		BED8FEE2260285F800FF405D /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../FireDrill/FireDrill/Views/HomeView.swift; sourceTree = "<group>"; };
 		E6A57448FC4BCFEE0C177FF3 /* Pods-Afuera App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afuera App.release.xcconfig"; path = "Target Support Files/Pods-Afuera App/Pods-Afuera App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -108,9 +120,11 @@
 		2FED4C9825FA76610016213D /* Afuera App */ = {
 			isa = PBXGroup;
 			children = (
+				BED8FEDC2602848E00FF405D /* UserInfo.swift */,
+				BED8FEDE2602849200FF405D /* UserViewModel.swift */,
+				BED8FED426027EDE00FF405D /* Views */,
 				2FED4C9925FA76610016213D /* AppDelegate.swift */,
 				2FED4C9B25FA76610016213D /* SceneDelegate.swift */,
-				2FED4C9D25FA76610016213D /* ContentView.swift */,
 				2FED4C9F25FA76630016213D /* Assets.xcassets */,
 				2FED4CA425FA76630016213D /* LaunchScreen.storyboard */,
 				2FED4CA725FA76630016213D /* Info.plist */,
@@ -161,6 +175,21 @@
 				88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BED8FED426027EDE00FF405D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BED8FED526027EDE00FF405D /* SignInWithEmailView.swift */,
+				BED8FED626027EDE00FF405D /* LoadImage.swift */,
+				BED8FED726027EDE00FF405D /* LoginView.swift */,
+				BED8FED926027EDE00FF405D /* ImagePicker.swift */,
+				BED8FEDA26027EDE00FF405D /* ForgotPasswordView.swift */,
+				2FED4C9D25FA76610016213D /* ContentView.swift */,
+				BED8FEE2260285F800FF405D /* HomeView.swift */,
+				BED8FEDB26027EDE00FF405D /* SignUpView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,8 +368,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BED8FEDD2602848E00FF405D /* UserInfo.swift in Sources */,
+				BED8FEE3260285F900FF405D /* HomeView.swift in Sources */,
 				2FED4C9A25FA76610016213D /* AppDelegate.swift in Sources */,
 				2FED4C9C25FA76610016213D /* SceneDelegate.swift in Sources */,
+				BED8FEDF2602849300FF405D /* UserViewModel.swift in Sources */,
 				2FED4C9E25FA76610016213D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

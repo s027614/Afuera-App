@@ -1,12 +1,13 @@
 //
 //  AppDelegate.swift
-//  Afuera App
+//  FireDrill
 //
-//  Created by Jacob Lowry (student LM) on 3/11/21.
-//  Copyright © 2021 Jacob Lowry (student LM). All rights reserved.
+//  Created by Elliot Ginzburg (student LM) on 2/3/21.
+//  Copyright © 2021 Elliot Ginzburg (student LM). All rights reserved.
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
         return true
     }
 
