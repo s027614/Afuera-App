@@ -16,10 +16,10 @@
 		2FED4CB125FA76630016213D /* Afuera_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4CB025FA76630016213D /* Afuera_AppTests.swift */; };
 		2FED4CBC25FA76630016213D /* Afuera_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4CBB25FA76630016213D /* Afuera_AppUITests.swift */; };
 		2FED4CCA26011EE90016213D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FED4CC926011EE80016213D /* GoogleService-Info.plist */; };
+		909077832603D0FF007F370C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909077822603D0FF007F370C /* HomeView.swift */; };
 		9104E442B2543AC184D6C4A2 /* Pods_Afuera_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */; };
 		BED8FEDD2602848E00FF405D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEDC2602848E00FF405D /* UserInfo.swift */; };
 		BED8FEDF2602849300FF405D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEDE2602849200FF405D /* UserViewModel.swift */; };
-		BED8FEE3260285F900FF405D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEE2260285F800FF405D /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +56,7 @@
 		2FED4CBD25FA76630016213D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FED4CC926011EE80016213D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Afuera_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		909077822603D0FF007F370C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9BEB820DCDDDBA0E3AB3AE8A /* Pods-Afuera App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afuera App.debug.xcconfig"; path = "Target Support Files/Pods-Afuera App/Pods-Afuera App.debug.xcconfig"; sourceTree = "<group>"; };
 		BED8FED526027EDE00FF405D /* SignInWithEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailView.swift; sourceTree = "<group>"; };
 		BED8FED626027EDE00FF405D /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		BED8FEDB26027EDE00FF405D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		BED8FEDC2602848E00FF405D /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		BED8FEDE2602849200FF405D /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		BED8FEE2260285F800FF405D /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../FireDrill/FireDrill/Views/HomeView.swift; sourceTree = "<group>"; };
 		E6A57448FC4BCFEE0C177FF3 /* Pods-Afuera App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afuera App.release.xcconfig"; path = "Target Support Files/Pods-Afuera App/Pods-Afuera App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -186,8 +186,8 @@
 				BED8FED926027EDE00FF405D /* ImagePicker.swift */,
 				BED8FEDA26027EDE00FF405D /* ForgotPasswordView.swift */,
 				2FED4C9D25FA76610016213D /* ContentView.swift */,
-				BED8FEE2260285F800FF405D /* HomeView.swift */,
 				BED8FEDB26027EDE00FF405D /* SignUpView.swift */,
+				909077822603D0FF007F370C /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -369,9 +369,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BED8FEDD2602848E00FF405D /* UserInfo.swift in Sources */,
-				BED8FEE3260285F900FF405D /* HomeView.swift in Sources */,
 				2FED4C9A25FA76610016213D /* AppDelegate.swift in Sources */,
 				2FED4C9C25FA76610016213D /* SceneDelegate.swift in Sources */,
+				909077832603D0FF007F370C /* HomeView.swift in Sources */,
 				BED8FEDF2602849300FF405D /* UserViewModel.swift in Sources */,
 				2FED4C9E25FA76610016213D /* ContentView.swift in Sources */,
 			);
