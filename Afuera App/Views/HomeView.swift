@@ -17,7 +17,7 @@ struct HomeView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
 
-    func saveImage(){
+    func saveImage(){
     guard let input = inputImage else {return}
     image = Image(uiImage: input)
     
