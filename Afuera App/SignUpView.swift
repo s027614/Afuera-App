@@ -8,6 +8,8 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 struct SignUpView: View {
     @EnvironmentObject var userInfo: UserInfo

@@ -6,10 +6,10 @@
 //  Copyright © 2021 Elliot Ginzburg (student LM). All rights reserved.
 //
 
-import FirebaseStorage
-import FirebaseDatabase
 import SwiftUI
 import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 struct HomeView: View {
     @EnvironmentObject var userInfo: UserInfo

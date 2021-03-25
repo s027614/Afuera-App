@@ -8,6 +8,8 @@
 
 import SwiftUI
 import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 struct ForgotPasswordView: View {
     @State var user: UserViewModel = UserViewModel()
