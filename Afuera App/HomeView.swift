@@ -57,7 +57,7 @@ struct HomeView: View {
             Button(action: {
                 self.showingImagePicker = true
             }) {
-                Text("Change LImage")
+                Text("Change Image")
                     .frame(width: 200)
                     .padding(.vertical, 15)
                     .background(Color.green)
