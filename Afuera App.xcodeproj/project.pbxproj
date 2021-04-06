@@ -24,6 +24,7 @@
 		2FED4CCA26011EE90016213D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FED4CC926011EE80016213D /* GoogleService-Info.plist */; };
 		909077832603D0FF007F370C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909077822603D0FF007F370C /* HomeView.swift */; };
 		9104E442B2543AC184D6C4A2 /* Pods_Afuera_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */; };
+		BE319A8A261CAE77007C8BDF /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE319A89261CAE77007C8BDF /* ProfileView.swift */; };
 		BED8FEDD2602848E00FF405D /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEDC2602848E00FF405D /* UserInfo.swift */; };
 		BED8FEDF2602849300FF405D /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEDE2602849200FF405D /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
@@ -64,6 +65,7 @@
 		88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Afuera_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		909077822603D0FF007F370C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9BEB820DCDDDBA0E3AB3AE8A /* Pods-Afuera App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afuera App.debug.xcconfig"; path = "Target Support Files/Pods-Afuera App/Pods-Afuera App.debug.xcconfig"; sourceTree = "<group>"; };
+		BE319A89261CAE77007C8BDF /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileView.swift; path = "Afuera App/ProfileView.swift"; sourceTree = SOURCE_ROOT; };
 		BED8FED526027EDE00FF405D /* SignInWithEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithEmailView.swift; sourceTree = "<group>"; };
 		BED8FED626027EDE00FF405D /* LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImage.swift; sourceTree = "<group>"; };
 		BED8FED726027EDE00FF405D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				BED8FEDE2602849200FF405D /* UserViewModel.swift */,
 				BED8FED426027EDE00FF405D /* Views */,
 				2FED4C9925FA76610016213D /* AppDelegate.swift */,
+				BE319A89261CAE77007C8BDF /* ProfileView.swift */,
 				BED8FEDB26027EDE00FF405D /* SignUpView.swift */,
 				BED8FED626027EDE00FF405D /* LoadImage.swift */,
 				BED8FED926027EDE00FF405D /* ImagePicker.swift */,
@@ -375,6 +378,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA492D3260D09DD0086317B /* SignInWithEmailView.swift in Sources */,
+				BE319A8A261CAE77007C8BDF /* ProfileView.swift in Sources */,
 				2FA492D5260D09E10086317B /* ForgotPasswordView.swift in Sources */,
 				2FA492D4260D09DF0086317B /* LoadImage.swift in Sources */,
 				BED8FEDD2602848E00FF405D /* UserInfo.swift in Sources */,
