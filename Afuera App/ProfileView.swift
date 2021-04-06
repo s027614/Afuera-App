@@ -12,12 +12,12 @@ struct ProfileView: View {
     var body: some View {
         ZStack {
         //background
-        Image("back").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
+        Image("backend").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
         
         VStack {
             //name
-            Text("Elliot Ginzburg").foregroundColor(Color.white).position(x: 210, y: 155)
-            Text("First SwiftUI Project").foregroundColor(Color.white).position(x: 210, y: 5)
+        
+            Text("MOD").foregroundColor(Color.white).position(x: 210, y: 5)
             Spacer()
             //game title
             Text("SUS OR NOT SUS GAME").fontWeight(.heavy).foregroundColor(Color.red)
