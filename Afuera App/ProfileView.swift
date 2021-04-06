@@ -20,7 +20,7 @@ struct ProfileView: View {
             Text("MOD").foregroundColor(Color.white).position(x: 210, y: 5)
             Spacer()
             //game title
-            Text("SUS OR NOT SUS GAME").fontWeight(.heavy).foregroundColor(Color.red)
+            Text("MOD").fontWeight(.heavy).foregroundColor(Color.red)
                 .font(.largeTitle).position(x: 210, y: 230)
             Spacer()
             }
