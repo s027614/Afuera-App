@@ -12,6 +12,8 @@ struct UserViewModel {
     var email: String = ""
     var password: String = ""
     var fullname: String = ""
+    var address: String = ""
+    var zipcode: String = ""
     var confirmPassword: String = ""
     
     // MARK: - Validation Checks
@@ -66,6 +68,21 @@ struct UserViewModel {
         }
     }
     
+    var validAddress: String {
+        if !isEmpty(_field: address) {
+            return ""
+        } else {
+            return "Enter your address"
+        }
+    }
+    
+    var validZipCode: String {
+        if !isEmpty(_field: zipcode) {
+            return ""
+        } else {
+            return "Enter your zipcode"
+        }
+    }
     
     var validEmailAddressText:String {
         if isEmailValid(_email: email) {

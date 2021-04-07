@@ -15,7 +15,7 @@ struct SignUpView: View {
     @EnvironmentObject var userInfo: UserInfo
     @State var user: UserViewModel = UserViewModel()
     @Environment(\.presentationMode) var presentationMode
-
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -24,6 +24,18 @@ struct SignUpView: View {
                         TextField("Full Name", text: self.$user.fullname).autocapitalization(.words)
                         if !user.validNameText.isEmpty {
                             Text(user.validNameText).font(.caption).foregroundColor(.red)
+                        }
+                    }
+                    VStack(alignment: .leading) {
+                        TextField("Address", text: self.$user.address).autocapitalization(.words)
+                        if !user.validAddress.isEmpty {
+                            Text(user.validAddress).font(.caption).foregroundColor(.red)
+                        }
+                    }
+                    VStack(alignment: .leading) {
+                        TextField("Zip-Code", text: self.$user.zipcode).autocapitalization(.words)
+                        if !user.validZipCode.isEmpty {
+                            Text(user.validZipCode).font(.caption).foregroundColor(.red)
                         }
                     }
                     VStack(alignment: .leading) {
@@ -48,9 +60,29 @@ struct SignUpView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 VStack(spacing: 20 ) {
                     Button(action: {
-                        Auth.auth().createUser(withEmail: self.user.email, password: self.user.password) { (user, error) in
-                            self.userInfo.configureFirebaseStateDidChange()
-                            self.presentationMode.wrappedValue.dismiss()
+                        Auth.auth().createUser(withEmail: self.user.validEmailAddressText, password: self.user.validPasswordText){ user, error in
+                            if let _ = user {
+                                print("user created")
+                                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                                changeRequest?.displayName = self.user.validNameText
+                                changeRequest?.commitChanges(completion: { (error) in
+                                    print("couldn't change name")
+                                })
+                                
+                                
+                                
+                                //Save address
+                                guard let uid = Auth.auth().currentUser?.uid else {return}
+                                let database = Database.database().reference()
+                                database.child("users/\(uid)/address").setValue(self.user.address)
+                                
+                                database.child("users/\(uid)/zipcode").setValue(self.user.zipcode)
+                                
+                                
+                            }
+                            else{
+                                print(error.debugDescription)
+                            }
                         }
                         
                     }) {
