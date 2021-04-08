@@ -60,20 +60,20 @@ struct SignUpView: View {
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                 VStack(spacing: 20 ) {
                     Button(action: {
-                        Auth.auth().createUser(withEmail: self.user.validEmailAddressText, password: self.user.validPasswordText){ user, error in
+                        
+                        Auth.auth().createUser(withEmail: self.user.email, password: self.user.password){ user, error in
                             if let _ = user {
+                                self.presentationMode.wrappedValue.dismiss()
                                 print("user created")
-                                let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                                changeRequest?.displayName = self.user.validNameText
-                                changeRequest?.commitChanges(completion: { (error) in
-                                    print("couldn't change name")
-                                })
                                 
                                 
                                 
                                 //Save address
                                 guard let uid = Auth.auth().currentUser?.uid else {return}
                                 let database = Database.database().reference()
+                                
+                                database.child("users/\(uid)/fullname").setValue(self.user.fullname)
+                                
                                 database.child("users/\(uid)/address").setValue(self.user.address)
                                 
                                 database.child("users/\(uid)/zipcode").setValue(self.user.zipcode)
@@ -84,6 +84,13 @@ struct SignUpView: View {
                                 print(error.debugDescription)
                             }
                         }
+                        
+                        
+                        
+                        
+                        
+                        
+                        
                         
                     }) {
                         Text("Register")
