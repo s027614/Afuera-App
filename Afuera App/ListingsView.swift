@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ProfileView: View {
+struct ListingsView: View {
     var body: some View {
         ZStack {
         //background
@@ -28,8 +28,8 @@ struct ProfileView: View {
     }
 }
 
-struct ProfileView_Previews: PreviewProvider {
+struct ListingsView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileView()
+        ListingsView()
     }
 }
