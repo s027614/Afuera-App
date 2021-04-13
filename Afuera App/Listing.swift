@@ -14,6 +14,8 @@ class Contact : Identifiable{
     var email : String
     var favorite : Bool
     var type : String // friend, co-worker, business
+    
+    // jawn
 
     init(image : String = "default", name : String = "name", email : String = "email", favorite : Bool  = false, type : String = "friend"){
         self.image = image
