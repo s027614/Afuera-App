@@ -21,6 +21,7 @@ struct SignUpView: View {
             VStack {
                 Group {
                     VStack(alignment: .leading) {
+                        
                         TextField("Full Name", text: self.$user.fullname).autocapitalization(.words)
                         if !user.validNameText.isEmpty {
                             Text(user.validNameText).font(.caption).foregroundColor(.red)
