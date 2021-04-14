@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         
         VStack{
-            Image("brown-1").resizable()
+            Image("brown-1").resizable().aspectRatio(contentMode: .fit).padding(.all, 7.0)
             Group{
                 if userInfo.isUserAuthenticated == .undefined{
                     Text("Loading")
@@ -29,7 +29,7 @@ struct ContentView: View {
             }.onAppear(){
                 self.userInfo.configureFirebaseStateDidChange()
             }
-        }
+        }.padding(.top, 250).padding(.bottom, 300)
         
     }
 }
