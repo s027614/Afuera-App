@@ -71,6 +71,8 @@ struct HomeView: View {
                         .foregroundColor(.white)
                 }.padding()
                 
+                ListingsButton()
+                
                 Spacer()
                 Spacer()
                 Spacer()
@@ -91,6 +93,7 @@ struct HomeView: View {
                 ImagePicker(image: self.$inputImage)
             }
             
+            
         }
         
         
@@ -107,7 +110,8 @@ struct HomeView: View {
         //            }
         //        }
     }
-}
+    }
+
 
 
 
