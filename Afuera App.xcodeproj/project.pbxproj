@@ -22,6 +22,7 @@
 		2FED4CB125FA76630016213D /* Afuera_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4CB025FA76630016213D /* Afuera_AppTests.swift */; };
 		2FED4CBC25FA76630016213D /* Afuera_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4CBB25FA76630016213D /* Afuera_AppUITests.swift */; };
 		2FED4CCA26011EE90016213D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FED4CC926011EE80016213D /* GoogleService-Info.plist */; };
+		9049940D2628BD5900BD5B1A /* ListingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9049940C2628BD5900BD5B1A /* ListingsButton.swift */; };
 		9070FA4A2625EF420063F6FE /* ListingDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA492625EF420063F6FE /* ListingDetail.swift */; };
 		9070FA4C2625F0510063F6FE /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA4B2625F0510063F6FE /* Listing.swift */; };
 		9070FA4E262757890063F6FE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA4D262757890063F6FE /* CardView.swift */; };
@@ -68,6 +69,7 @@
 		2FED4CBD25FA76630016213D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FED4CC926011EE80016213D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Afuera_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9049940C2628BD5900BD5B1A /* ListingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingsButton.swift; sourceTree = "<group>"; };
 		9070FA492625EF420063F6FE /* ListingDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetail.swift; sourceTree = "<group>"; };
 		9070FA4B2625F0510063F6FE /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		9070FA4D262757890063F6FE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				BE319A89261CAE77007C8BDF /* ListingsView.swift */,
 				9070FA4B2625F0510063F6FE /* Listing.swift */,
 				9070FA512627ECB30063F6FE /* AddButton.swift */,
+				9049940C2628BD5900BD5B1A /* ListingsButton.swift */,
 				9070FA4F2627E03C0063F6FE /* AddButtonView.swift */,
 				2FED4C9D25FA76610016213D /* ContentView.swift */,
 				2FED4C9B25FA76610016213D /* SceneDelegate.swift */,
@@ -386,6 +389,7 @@
 			files = (
 				2FA492D3260D09DD0086317B /* SignInWithEmailView.swift in Sources */,
 				BE319A8A261CAE77007C8BDF /* ListingsView.swift in Sources */,
+				9049940D2628BD5900BD5B1A /* ListingsButton.swift in Sources */,
 				2FA492D5260D09E10086317B /* ForgotPasswordView.swift in Sources */,
 				9070FA522627ECB30063F6FE /* AddButton.swift in Sources */,
 				2FA492D4260D09DF0086317B /* LoadImage.swift in Sources */,
