@@ -7,17 +7,17 @@
 //
 
 import Foundation
-class Contact : Identifiable{
+class Listing : Identifiable{
     var id = UUID()
     var image : String
     var name : String
     var email : String
     var favorite : Bool
     var type : String // friend, co-worker, business
-    
-    // jawn
 
-    init(image : String = "default", name : String = "name", email : String = "email", favorite : Bool  = false, type : String = "friend"){
+
+
+    init(image : String = "user", name : String = "name", email : String = "email", favorite : Bool  = false, type : String = "friend"){
         self.image = image
         self.name = name
         self.email = email

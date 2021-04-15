@@ -1,73 +1,60 @@
-////
-////  ContentView.swift
-////  Contacts
-////
-////  Created by Swope, Thomas on 12/4/20.
-////  Copyright © 2020 Swope, Thomas. All rights reserved.
-////
 //
-//import SwiftUI
+//  ContentView.swift
+//  Contacts
 //
-//// ContentView struct
-//// Adds several contacts to the UI and also adds the button to add a contact
-//struct ListingsView: View {
+//  Created by Swope, Thomas on 12/4/20.
+//  Copyright © 2020 Swope, Thomas. All rights reserved.
 //
-//    @State var contacts : [Contact] =
-//    [Contact(image: "ben", name: "Ben", email: "BenSmith@NewWaveComputers.com"),
-//     Contact(image: "aslan", name: "Aslan", email: "Aslan@NewWaveComputers.com"),
-//     Contact(image: "humphrey", name: "Humphrey", email: "Humphrey@NewWaveComputers.com"),
-//     Contact(image: "joseph", name: "Joseph", email: "Joseph@NewWaveComputers.com"),
-//     Contact(image: "kelly", name: "Kelly", email: "Kelly@NewWaveComputers.com"),
-//     Contact(image: "michael", name: "Michael", email: "Michael@NewWaveComputers.com"),
-//     Contact(image: "prince", name: "Prince", email: "Prince@NewWaveComputers.com"),].sorted {$0.name < $1.name}
-//    @State var contact : Contact = Contact(image: "tyler", name: "Tyler", email: "Tyler@NewWaveComputers.com")
-//
-//    var body: some View {
-//        ZStack{
-//            // backgroud image
-//            Image("background")
-//                .opacity(0.1)
-//
-//            VStack(){
-//
-//                // adds a contact
-//                CardView(contact: $contacts[0])
-//
-//
-//                CardView(contact: $contacts[1])
-//
-//
-//                CardView(contact: $contacts[2])
-//
-//
-//                CardView(contact: $contacts[3])
-//
-//
-//                CardView(contact: $contacts[4])
-//
-//
-//                CardView(contact: $contacts[5])
-//
-//
-//                CardView(contact: $contacts[6])
-//
-//                Spacer()
-//                HStack{
-//                    Spacer()
-//                    // adds a button
-//                    ButtonView(contacts: $contacts, contact: $contact)
-//
-//                }
-//            }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
-//                .padding(.top, 80)
-//        }
-//    }
-//}
-//
-//struct ListingsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ListingsView()
-//    }
-//}
-//
-//
+
+import SwiftUI
+
+//This struct is the main view which displays all of thext and images for each contact
+struct ListingsView: View {
+    
+    //THe array of contacts
+    @State var listings : [Listing] =
+        [Listing(image: "joe mama", name: "Ben", email: "BenSmith@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Aslan", email: "Aslan@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Humphrey", email: "Humphrey@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Joseph", email: "Joseph@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Kelly", email: "Kelly@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Michael", email: "Michael@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Prince", email: "Prince@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Tyler", email: "Tyler@NewWaveComputers.com")
+            ].sorted(by: {$0.name < $1.name})
+    
+    
+    var body: some View {
+        ZStack{
+            Image("background")
+                .opacity(0.1)
+            
+            VStack(){
+                
+                //All of the contacts are displayed using binding from the CardView
+                ListingListView(listings: $listings)
+                HStack(){
+                    Spacer()
+                    
+                    //Displays the add button
+                    AddButtonView(listings: $listings)
+                    
+                }
+                Spacer()
+
+            }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
+            
+            
+            
+            
+        }.frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .center)
+            .padding(.top, 80)
+    }
+}
+
+
+struct ListingsView_Previews: PreviewProvider {
+    static var previews: some View {
+        ListingsView()
+    }
+}
