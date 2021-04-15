@@ -1,32 +1,52 @@
 //
-//  ProfileView.swift
-//  Afuera App
+//  ListingsView.swift
+//  Contacts
 //
-//  Created by Elliot Ginzburg (student LM) on 4/6/21.
-//  Copyright © 2021 Jacob Lowry (student LM). All rights reserved.
+//  Created by Swope, Thomas on 12/4/20.
+//  Copyright © 2020 Swope, Thomas. All rights reserved.
 //
 
 import SwiftUI
 
 struct ListingsView: View {
+    
+    @State var listings : [Listing] =
+        [Listing(image: "joe mama", name: "Ben", email: "BenSmith@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Aslan", email: "BenSmith@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Humphrey", email: "BenSmith@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Joseph", email: "BenSmith@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Kelly", email: "BenSmith@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Michael", email: "BenSmith@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Prince", email: "BenSmith@NewWaveComputers.com"),
+         Listing(image: "joe mama", name: "Tyler", email: "BenSmith@NewWaveComputers.com")
+            ].sorted(by: {$0.name < $1.name})
+    
     var body: some View {
-        ZStack {
-        //background
-        Image("backend").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
-        
+
         VStack {
-            //name
         
-            Text("MOD").foregroundColor(Color.white).position(x: 210, y: 5)
-            Spacer()
-            //game title
-            Text("MOD").fontWeight(.heavy).foregroundColor(Color.red)
-                .font(.largeTitle).position(x: 210, y: 230)
-            Spacer()
-            }
+            Text("Current Listings")
+            
+            NavigationView{
+                
+                List{
+                    
+                    AddButton(listings: $listings)
+                    
+                    CardView(listing: self.$listings[1], listings: self.$listings)
+                     CardView(listing: self.$listings[1], listings: self.$listings)
+                     CardView(listing: self.$listings[1], listings: self.$listings)
+                     CardView(listing: self.$listings[1], listings: self.$listings)
+                     CardView(listing: self.$listings[1], listings: self.$listings)
+                     CardView(listing: self.$listings[1], listings: self.$listings)
+                     CardView(listing: self.$listings[1], listings: self.$listings)
+                    }
+                }.navigationBarTitle("Listings")
+                .navigationBarItems(trailing: AddButton(listings: $listings))
         }
     }
 }
+
 
 struct ListingsView_Previews: PreviewProvider {
     static var previews: some View {

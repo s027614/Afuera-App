@@ -22,6 +22,11 @@
 		2FED4CB125FA76630016213D /* Afuera_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4CB025FA76630016213D /* Afuera_AppTests.swift */; };
 		2FED4CBC25FA76630016213D /* Afuera_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4CBB25FA76630016213D /* Afuera_AppUITests.swift */; };
 		2FED4CCA26011EE90016213D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2FED4CC926011EE80016213D /* GoogleService-Info.plist */; };
+		9070FA4A2625EF420063F6FE /* ListingDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA492625EF420063F6FE /* ListingDetail.swift */; };
+		9070FA4C2625F0510063F6FE /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA4B2625F0510063F6FE /* Listing.swift */; };
+		9070FA4E262757890063F6FE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA4D262757890063F6FE /* CardView.swift */; };
+		9070FA502627E03C0063F6FE /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA4F2627E03C0063F6FE /* AddButtonView.swift */; };
+		9070FA522627ECB30063F6FE /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA512627ECB30063F6FE /* AddButton.swift */; };
 		909077832603D0FF007F370C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909077822603D0FF007F370C /* HomeView.swift */; };
 		9104E442B2543AC184D6C4A2 /* Pods_Afuera_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */; };
 		BE319A8A261CAE77007C8BDF /* ListingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE319A89261CAE77007C8BDF /* ListingsView.swift */; };
@@ -63,6 +68,11 @@
 		2FED4CBD25FA76630016213D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FED4CC926011EE80016213D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Afuera_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9070FA492625EF420063F6FE /* ListingDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetail.swift; sourceTree = "<group>"; };
+		9070FA4B2625F0510063F6FE /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
+		9070FA4D262757890063F6FE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		9070FA4F2627E03C0063F6FE /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
+		9070FA512627ECB30063F6FE /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		909077822603D0FF007F370C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9BEB820DCDDDBA0E3AB3AE8A /* Pods-Afuera App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afuera App.debug.xcconfig"; path = "Target Support Files/Pods-Afuera App/Pods-Afuera App.debug.xcconfig"; sourceTree = "<group>"; };
 		BE319A89261CAE77007C8BDF /* ListingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ListingsView.swift; path = "Afuera App/ListingsView.swift"; sourceTree = SOURCE_ROOT; };
@@ -130,9 +140,7 @@
 			children = (
 				BED8FEDC2602848E00FF405D /* UserInfo.swift */,
 				BED8FEDE2602849200FF405D /* UserViewModel.swift */,
-				BED8FED426027EDE00FF405D /* Views */,
 				2FED4C9925FA76610016213D /* AppDelegate.swift */,
-				BE319A89261CAE77007C8BDF /* ListingsView.swift */,
 				BED8FEDB26027EDE00FF405D /* SignUpView.swift */,
 				BED8FED626027EDE00FF405D /* LoadImage.swift */,
 				BED8FED926027EDE00FF405D /* ImagePicker.swift */,
@@ -140,6 +148,12 @@
 				909077822603D0FF007F370C /* HomeView.swift */,
 				BED8FEDA26027EDE00FF405D /* ForgotPasswordView.swift */,
 				BED8FED526027EDE00FF405D /* SignInWithEmailView.swift */,
+				9070FA492625EF420063F6FE /* ListingDetail.swift */,
+				9070FA4D262757890063F6FE /* CardView.swift */,
+				BE319A89261CAE77007C8BDF /* ListingsView.swift */,
+				9070FA4B2625F0510063F6FE /* Listing.swift */,
+				9070FA512627ECB30063F6FE /* AddButton.swift */,
+				9070FA4F2627E03C0063F6FE /* AddButtonView.swift */,
 				2FED4C9D25FA76610016213D /* ContentView.swift */,
 				2FED4C9B25FA76610016213D /* SceneDelegate.swift */,
 				2FED4C9F25FA76630016213D /* Assets.xcassets */,
@@ -192,13 +206,6 @@
 				88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BED8FED426027EDE00FF405D /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,15 +387,20 @@
 				2FA492D3260D09DD0086317B /* SignInWithEmailView.swift in Sources */,
 				BE319A8A261CAE77007C8BDF /* ListingsView.swift in Sources */,
 				2FA492D5260D09E10086317B /* ForgotPasswordView.swift in Sources */,
+				9070FA522627ECB30063F6FE /* AddButton.swift in Sources */,
 				2FA492D4260D09DF0086317B /* LoadImage.swift in Sources */,
 				BED8FEDD2602848E00FF405D /* UserInfo.swift in Sources */,
 				2FA492D6260D09E50086317B /* SignUpView.swift in Sources */,
 				2FA492D1260D08400086317B /* LoginView.swift in Sources */,
+				9070FA4C2625F0510063F6FE /* Listing.swift in Sources */,
 				2FED4C9A25FA76610016213D /* AppDelegate.swift in Sources */,
 				2FED4C9C25FA76610016213D /* SceneDelegate.swift in Sources */,
 				909077832603D0FF007F370C /* HomeView.swift in Sources */,
 				2FA492D2260D08970086317B /* ImagePicker.swift in Sources */,
+				9070FA502627E03C0063F6FE /* AddButtonView.swift in Sources */,
+				9070FA4A2625EF420063F6FE /* ListingDetail.swift in Sources */,
 				BED8FEDF2602849300FF405D /* UserViewModel.swift in Sources */,
+				9070FA4E262757890063F6FE /* CardView.swift in Sources */,
 				2FED4C9E25FA76610016213D /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

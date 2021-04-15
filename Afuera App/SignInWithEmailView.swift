@@ -16,6 +16,7 @@ struct SignInWithEmailView: View {
     @Binding var action:LoginView.Action?
     var body: some View {
         VStack {
+            Image("brown").resizable()
             TextField("Email Address",
                       text: self.$user.email)
                 .autocapitalization(.none)

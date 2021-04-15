@@ -13,19 +13,24 @@ import FirebaseDatabase
 struct ContentView: View {
     @EnvironmentObject var userInfo: UserInfo
     var body: some View {
-        Group{
-            if userInfo.isUserAuthenticated == .undefined{
-                Text("Boading")
+        
+        VStack{
+            Image("brown-1").resizable().aspectRatio(contentMode: .fit).padding(.all, 7.0)
+            Group{
+                if userInfo.isUserAuthenticated == .undefined{
+                    Text("Loading")
+                }
+                else if userInfo.isUserAuthenticated == .signedOut{
+                    LoginView()
+                }
+                else {
+                    HomeView()
+                }
+            }.onAppear(){
+                self.userInfo.configureFirebaseStateDidChange()
             }
-            else if userInfo.isUserAuthenticated == .signedOut{
-                LoginView()
-            }
-            else {
-                HomeView()
-            }
-        }.onAppear(){
-            self.userInfo.configureFirebaseStateDidChange()
-        }
+        }.padding(.top, 250).padding(.bottom, 300)
+        
     }
 }
 
