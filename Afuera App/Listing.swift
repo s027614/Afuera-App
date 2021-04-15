@@ -12,16 +12,20 @@ class Listing : Identifiable{
     var image : String
     var name : String
     var email : String
-    var favorite : Bool
-    var type : String // friend, co-worker, business
+    var experienceRequired : Bool
+    var type : String // pool, lawn, shoveling, etc.
+    var hourlyRate : String
+    var numberOfPeople : String
 
 
 
-    init(image : String = "user", name : String = "name", email : String = "email", favorite : Bool  = false, type : String = "friend"){
+    init(image : String = "user", name : String = "name", email : String = "email", experienceRequired : Bool  = false, type : String = "lawn care", hourlyRate : String = "pay rate", numberOfPeople : String = "1"){
         self.image = image
         self.name = name
         self.email = email
-        self.favorite = favorite
+        self.experienceRequired = experienceRequired
         self.type = type
+        self.hourlyRate = hourlyRate
+        self.numberOfPeople = numberOfPeople
     }
 }

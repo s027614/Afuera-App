@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ListingsView.swift
 //  Contacts
 //
 //  Created by Swope, Thomas on 12/4/20.
@@ -23,9 +23,16 @@ struct ListingsView: View {
     
     var body: some View {
 
+        VStack {
+        
+            Text("Current Listings")
+            
             NavigationView{
                 
                 List{
+                    
+                    AddButton(listings: $listings)
+                    
                     CardView(listing: self.$listings[1], listings: self.$listings)
                      CardView(listing: self.$listings[1], listings: self.$listings)
                      CardView(listing: self.$listings[1], listings: self.$listings)
@@ -37,6 +44,7 @@ struct ListingsView: View {
                 }.navigationBarTitle("Listings")
                 .navigationBarItems(trailing: AddButton(listings: $listings))
         }
+    }
 }
 
 

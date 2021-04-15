@@ -16,6 +16,8 @@ struct AddButton: View {
         NavigationLink(destination: ListingDetail(listing: Binding.constant(Listing()), listings: $listings)) {
             Image(systemName: "plus")
             .foregroundColor(.black)
+            Text("Add A Listing")
+            .foregroundColor(.black)
         }
     }
 }

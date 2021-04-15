@@ -13,7 +13,8 @@ struct ListingDetail: View {
     
     @Binding var listing : Listing
     @Binding var listings : [Listing]
-    var contactTypeOptions : [String] = ["Friend","Coworker","Business"]
+    var activityTypeOptions : [String] = ["Yardwork","Shoveling","Pool Care"]
+    var numberOfPeopleOptions : [String] = ["1", "2", "3", "4+"]
     
     
     var body: some View {
@@ -32,12 +33,22 @@ struct ListingDetail: View {
                         .font(.system(size: 20))
                 }
                 Section {
-                    Toggle(isOn: $listing.favorite) {
-                        Text("Favorite")
+                    Toggle(isOn: $listing.experienceRequired) {
+                        Text("Experience Required")
                     }
-                    Picker(selection: $listing.type, label: Text("Contact Type")) {
-                        ForEach(0..<contactTypeOptions.count) { i in
-                            Text(self.contactTypeOptions[i])
+                    Picker(selection: $listing.type, label: Text("Activity Type")) {
+                        ForEach(0..<activityTypeOptions.count) { i in
+                            Text(self.activityTypeOptions[i])
+                        }
+                    }
+                }
+                
+                Section {
+                    TextField("Hourly Pay Rate", text: $listing.hourlyRate)
+                        .keyboardType(.decimalPad)
+                    Picker(selection: $listing.type, label: Text("Number of People Needed")) {
+                        ForEach(0..<numberOfPeopleOptions.count) { i in
+                            Text(self.numberOfPeopleOptions[i])
                         }
                     }
                 }
@@ -53,6 +64,6 @@ struct ListingDetail: View {
 
 struct ListingDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ListingDetail(listing: Binding.constant(Listing(image: "ben", name: "joe mama", email: "ben@ben.ben")), listings: Binding.constant([Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")]))
+        ListingDetail(listing: Binding.constant(Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")), listings: Binding.constant([Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")]))
     }
 }
