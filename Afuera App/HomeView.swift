@@ -71,9 +71,10 @@ struct HomeView: View {
                         .foregroundColor(.white)
                 }.padding()
                 
-                ListingsButton()
+                NavigationView {
+                    ListingsButton()
+                }
                 
-                Spacer()
                 Spacer()
                 Spacer()
             
