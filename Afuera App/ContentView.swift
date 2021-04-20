@@ -15,7 +15,7 @@ struct ContentView: View {
     var body: some View {
         
         VStack{
-            Image("brown-1").resizable().aspectRatio(contentMode: .fit).padding(.all, 7.0)
+            
             Group{
                 if userInfo.isUserAuthenticated == .undefined{
                     Text("Loading")
