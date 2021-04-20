@@ -59,7 +59,7 @@ struct HomeView: View {
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
-                        .frame(width: 200, height: 200, alignment: .center)
+                        .frame(width: 150, height: 150, alignment: .center)
                         .clipped()
                         .cornerRadius(200)
                     Button(action: {
@@ -90,9 +90,12 @@ struct HomeView: View {
                             .background(Color.blue)
                             .cornerRadius(8)
                             .foregroundColor(.white)
+                        
                     }.padding()
+                    Spacer()
                 }.sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
                     ImagePicker(image: self.$inputImage)
+                    
                 }
                 
                 
