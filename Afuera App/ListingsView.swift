@@ -24,8 +24,6 @@ struct ListingsView: View {
     var body: some View {
 
         VStack {
-        
-            Text("Current Listings")
             
             NavigationView{
                 
@@ -42,7 +40,7 @@ struct ListingsView: View {
                      CardView(listing: self.$listings[1], listings: self.$listings)
                     }
                 }.navigationBarTitle("Listings")
-                .navigationBarItems(trailing: AddButton(listings: $listings))
+               // .navigationBarItems(trailing: AddButton(listings: $listings))
         }
     }
 }

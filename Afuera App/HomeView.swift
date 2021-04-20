@@ -48,53 +48,55 @@ struct HomeView: View {
         }
     }
     var body: some View {
-        ZStack {
+        NavigationView {
+            ZStack {
             //background
             Image("backend").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
-            VStack {
-                Spacer()
                 
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 200, height: 200, alignment: .center)
-                    .clipped()
-                    .cornerRadius(200)
-                Button(action: {
-                    self.showingImagePicker = true
-                }) {
-                    Text("Change Image")
-                        .frame(width: 180)
-                        .padding(.vertical, 15)
-                        .background(Color.blue)
-                        .cornerRadius(8)
-                        .foregroundColor(.white)
-                }.padding()
-                
-                NavigationView {
+                VStack {
+                    Spacer()
+                    
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 200, height: 200, alignment: .center)
+                        .clipped()
+                        .cornerRadius(200)
+                    Button(action: {
+                        self.showingImagePicker = true
+                    }) {
+                        Text("Change Image")
+                            .frame(width: 180)
+                            .padding(.vertical, 15)
+                            .background(Color.blue)
+                            .cornerRadius(8)
+                            .foregroundColor(.white)
+                    }.padding()
+                    
                     ListingsButton()
+                    
+                    
+                    Spacer()
+                    Spacer()
+                    
+                    
+                    Button(action: {
+                        try! Auth.auth().signOut()
+                        self.userInfo.configureFirebaseStateDidChange()
+                    }) {
+                        Text("Log Out")
+                            .frame(width: 180)
+                            .padding(.vertical, 15)
+                            .background(Color.blue)
+                            .cornerRadius(8)
+                            .foregroundColor(.white)
+                    }.padding()
+                }.sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
+                    ImagePicker(image: self.$inputImage)
                 }
                 
-                Spacer()
-                Spacer()
-            
-                    
-                Button(action: {
-                    try! Auth.auth().signOut()
-                    self.userInfo.configureFirebaseStateDidChange()
-                }) {
-                    Text("Log Out")
-                        .frame(width: 180)
-                        .padding(.vertical, 15)
-                        .background(Color.blue)
-                        .cornerRadius(8)
-                        .foregroundColor(.white)
-                }.padding()
-            }.sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
-                ImagePicker(image: self.$inputImage)
+                
             }
-            
-            
         }
         
         
@@ -111,7 +113,7 @@ struct HomeView: View {
         //            }
         //        }
     }
-    }
+}
 
 
 
