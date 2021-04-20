@@ -51,7 +51,7 @@ struct HomeView: View {
         NavigationView {
             ZStack {
             //background
-            Image("backend").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
+                Image("backend").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
                 
                 VStack {
                     Spacer()
@@ -73,8 +73,13 @@ struct HomeView: View {
                             .foregroundColor(.white)
                     }.padding()
                     
-                    ListingsButton()
+                    HStack{
+                        ListingsButton()
+                            .padding()
                     
+                        AcceptedListingsButton()
+                            .padding()
+                    }
                     
                     Spacer()
                     Spacer()

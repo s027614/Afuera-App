@@ -8,11 +8,11 @@
 
 import SwiftUI
 
-struct ListingsButton: View {
+struct AcceptedListingsButton: View {
     
     var body: some View {
-        NavigationLink(destination: ListingsView()) {
-            Text("Listings Page")
+        NavigationLink(destination: AcceptedListingsView()) {
+            Text("Accepted Listings")
             .frame(width: 180)
             .padding(.vertical, 15)
             .background(Color.blue)
@@ -22,8 +22,8 @@ struct ListingsButton: View {
     }
 }
 
-struct ListingsButton_Previews: PreviewProvider {
+struct AcceptedListingsButton_Previews: PreviewProvider {
     static var previews: some View {
-        ListingsButton()
+        AcceptedListingsButton()
     }
 }
