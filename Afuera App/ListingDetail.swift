@@ -23,7 +23,7 @@ struct ListingDetail: View {
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .clipShape(Circle())
-                .frame(width: 300, height: 300, alignment: .center)
+                .frame(width: 150, height: 150, alignment: .center)
             
             Form {
                 Section {
