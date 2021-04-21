@@ -73,6 +73,12 @@ struct HomeView: View {
                             .foregroundColor(.white)
                     }.padding()
                     
+                    Text("name")
+                        .padding()
+                    Text("adress")
+                        .padding()
+                    
+                    
                     HStack{
                         ListingsButton()
                             .padding()
