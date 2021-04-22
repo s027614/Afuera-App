@@ -17,6 +17,28 @@ struct HomeView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     
+    
+    
+    //get reference to the databse
+    
+    let uid = Auth.auth().currentUser?.uid
+       
+    
+    let databaseRef = Database.database().reference()
+    
+    
+   /* let username = (databaseRef.child("users/\(uid)/fullname")).getData { (error, snapshot) in
+        if let error = error {
+            print("Error getting data \(error)")
+        }
+        else if snapshot.exists() {
+            print("Got data \(snapshot.value!)")
+        }
+        else {
+            print("No data available")
+        }
+    }
+    */
     func saveImage(){
         guard let input = inputImage else {return}
         image = Image(uiImage: input)
@@ -25,7 +47,9 @@ struct HomeView: View {
         guard let uid = Auth.auth().currentUser?.uid else {return}
         
         //get reference to the storage
-        let storage = Storage.storage().reference().child("user/\(uid)")
+        let storage = Storage.storage().reference().child("users/\(uid)")
+        
+        
         
         //images have to be saved as data objects to convert and compress
         
@@ -48,6 +72,9 @@ struct HomeView: View {
         }
     }
     var body: some View {
+        
+        
+        
         NavigationView {
             ZStack {
             //background
@@ -62,6 +89,12 @@ struct HomeView: View {
                         .frame(width: 150, height: 150, alignment: .center)
                         .clipped()
                         .cornerRadius(200)
+                    
+                    Text("\(databaseRef.child("users/\(uid)/fullname"))")
+                            .padding()
+                    
+                    
+                    
                     Button(action: {
                         self.showingImagePicker = true
                     }) {
@@ -73,22 +106,19 @@ struct HomeView: View {
                             .foregroundColor(.white)
                     }.padding()
                     
-                    Text("name")
-                        .padding()
-                    Text("adress")
-                        .padding()
                     
                     
-                    HStack{
+                    
+                    
                         ListingsButton()
                             .padding()
                     
                         AcceptedListingsButton()
                             .padding()
-                    }
+                    
                     
                     Spacer()
-                    Spacer()
+        
                     
                     
                     Button(action: {
