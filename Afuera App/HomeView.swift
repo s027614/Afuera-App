@@ -19,52 +19,29 @@ struct HomeView: View {
     
     @State var user: UserViewModel = UserViewModel()
     
-    func getUsername(){
-        let uid = Auth.auth().currentUser?.uid
-        
-        
-        let databaseRef = Database.database().reference()
-        
-        
-        let username = (databaseRef.child("users/\(uid)/fullname")).getData { (error, snapshot) in
-            if let error = error {
-                print("Error getting data \(error)")
-            }
-            else if snapshot.exists() {
-                print("Got data \(snapshot.value!)")
-            }
-            else {
-                print("No data available")
-            }
-        }
-        
-    }
     
-    func loadName(){
+    func loadName() -> String{
 
-        guard let uid  = Auth.auth().currentUser?.uid else {return}
+        guard let uid  = Auth.auth().currentUser?.uid else {return " "}
 
         var ref: DatabaseReference!
+        var r = "name"
 
         ref = Database.database().reference()
 
         ref.child("users/\(uid)/name").getData { (error, snapshot) in
 
-            
-
             if let error = error {
 
                 print("Error getting data \(error)")
 
             }
 
-            else if snapshot.exists() {
-
-                self.user.fullname = ("\(snapshot.value!)")
-
-            }
+             r = snapshot.value! as! String
 
         }
+        
+        return r
 
     }
     
@@ -123,7 +100,7 @@ struct HomeView: View {
                         .clipped()
                         .cornerRadius(200)
                     
-                    Text("\(user.fullname)")
+                    Text("\(loadName())")
                             .padding()
                     
                     
