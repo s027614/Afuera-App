@@ -21,7 +21,7 @@ struct CardView: View {
                 .frame(width: 100, height: 100, alignment: .center)
                 .clipped()
 
-            NavigationLink(destination: ListingDetail(listing: $listing, listings : $listings)) {
+            NavigationLink(destination: ListingDetailUneditable(listing: $listing, listings : $listings)) {
                 VStack(alignment: .leading){
                     Text(listing.name).font(.system(size: 30))
                         .foregroundColor(.orange)

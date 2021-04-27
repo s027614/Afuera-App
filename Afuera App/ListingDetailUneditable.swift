@@ -11,7 +11,7 @@ import SwiftUI
 
 struct ListingDetailUneditable: View {
     
-    @State var listing = Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com", experienceRequired: true, type: "pool care", hourlyRate: "$10", numberOfPeople: "3")
+    @Binding var listing : Listing
     @Binding var listings : [Listing]
     
     
@@ -25,30 +25,34 @@ struct ListingDetailUneditable: View {
             
             Form {
                 Section {
-                    Text("Name: \(listing.name)")
+                    Text("Name: \(self.listing.name)")
                         .font(.system(size: 30))
-                    Text("Email: \(listing.email)")
+                    Text("Email: \(self.listing.email)")
                         .font(.system(size: 20))
                 }
                 Section {
-                    if listing.experienceRequired == true {
+                    if self.listing.experienceRequired == true {
                         Text("Experience Required")
                     }
                     else {
                         Text("Experience Not Required")
                     }
-                    Text("Activity Type: \(listing.type)")
+                    Text("Activity Type: \(self.listing.type)")
                 }
                 
                 Section {
-                    Text("Hourly Pay Rate: \(listing.hourlyRate)")
-                    Text("Number of People Needed \(listing.numberOfPeople)")
+                    Text("Hourly Pay Rate: \(self.listing.hourlyRate)")
+                    Text("Number of People Needed: \(self.listing.numberOfPeople)")
                 }
             }
-            Button(action: {
-                self.listings.append(self.listing)
-            }) {
-                Text("Accept Listing")
+            
+            if self.listing.isAccepted == false {
+                Button(action: {
+                    self.listings.append(self.listing)
+                    self.listing.isAccepted == true
+                }) {
+                    Text("Accept Listing")
+                }
             }
         }
     }
@@ -56,6 +60,6 @@ struct ListingDetailUneditable: View {
 
 struct ListingDetailUneditable_Previews: PreviewProvider {
     static var previews: some View {
-        ListingDetailUneditable(listings: Binding.constant([Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")]))
+        ListingDetailUneditable(listing: Binding.constant(Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")), listings: Binding.constant([Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")]))
     }
 }
