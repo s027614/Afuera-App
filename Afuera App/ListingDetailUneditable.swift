@@ -13,6 +13,7 @@ struct ListingDetailUneditable: View {
     
     @Binding var listing : Listing
     @Binding var listings : [Listing]
+    @Environment(\.presentationMode) var presentationMode
     
     
     var body: some View {
@@ -49,7 +50,9 @@ struct ListingDetailUneditable: View {
             if self.listing.isAccepted == false {
                 Button(action: {
                     self.listings.append(self.listing)
-                    self.listing.isAccepted == true
+                    self.listing.isAccepted = true
+                    self.presentationMode.wrappedValue.dismiss()
+                    
                 }) {
                     Text("Accept Listing")
                 }
