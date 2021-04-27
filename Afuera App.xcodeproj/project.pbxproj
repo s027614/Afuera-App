@@ -13,6 +13,7 @@
 		2FA492D4260D09DF0086317B /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FED626027EDE00FF405D /* LoadImage.swift */; };
 		2FA492D5260D09E10086317B /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEDA26027EDE00FF405D /* ForgotPasswordView.swift */; };
 		2FA492D6260D09E50086317B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEDB26027EDE00FF405D /* SignUpView.swift */; };
+		2FDB8097263854B300A1513A /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB8096263854B200A1513A /* ListingViewModel.swift */; };
 		2FED4C9A25FA76610016213D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4C9925FA76610016213D /* AppDelegate.swift */; };
 		2FED4C9C25FA76610016213D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4C9B25FA76610016213D /* SceneDelegate.swift */; };
 		2FED4C9E25FA76610016213D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4C9D25FA76610016213D /* ContentView.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2FDB8096263854B200A1513A /* ListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
 		2FED4C9625FA76610016213D /* Afuera App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Afuera App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FED4C9925FA76610016213D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FED4C9B25FA76610016213D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				BED8FEDC2602848E00FF405D /* UserInfo.swift */,
 				BED8FEDE2602849200FF405D /* UserViewModel.swift */,
+				2FDB8096263854B200A1513A /* ListingViewModel.swift */,
 				2FED4C9925FA76610016213D /* AppDelegate.swift */,
 				BED8FEDB26027EDE00FF405D /* SignUpView.swift */,
 				BED8FED626027EDE00FF405D /* LoadImage.swift */,
@@ -397,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA492D3260D09DD0086317B /* SignInWithEmailView.swift in Sources */,
+				2FDB8097263854B300A1513A /* ListingViewModel.swift in Sources */,
 				BE319A8A261CAE77007C8BDF /* ListingsView.swift in Sources */,
 				90499413262F5A0600BD5B1A /* ListingDetailUneditable.swift in Sources */,
 				9049940D2628BD5900BD5B1A /* ListingsButton.swift in Sources */,

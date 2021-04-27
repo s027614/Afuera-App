@@ -17,28 +17,61 @@ struct HomeView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     
+    @State var user: UserViewModel = UserViewModel()
     
-    
-    //get reference to the databse
-    
-    let uid = Auth.auth().currentUser?.uid
-       
-    
-    let databaseRef = Database.database().reference()
-    
-    
-   /* let username = (databaseRef.child("users/\(uid)/fullname")).getData { (error, snapshot) in
-        if let error = error {
-            print("Error getting data \(error)")
+    func getUsername(){
+        let uid = Auth.auth().currentUser?.uid
+        
+        
+        let databaseRef = Database.database().reference()
+        
+        
+        let username = (databaseRef.child("users/\(uid)/fullname")).getData { (error, snapshot) in
+            if let error = error {
+                print("Error getting data \(error)")
+            }
+            else if snapshot.exists() {
+                print("Got data \(snapshot.value!)")
+            }
+            else {
+                print("No data available")
+            }
         }
-        else if snapshot.exists() {
-            print("Got data \(snapshot.value!)")
-        }
-        else {
-            print("No data available")
-        }
+        
     }
-    */
+    
+    func loadName(){
+
+        guard let uid  = Auth.auth().currentUser?.uid else {return}
+
+        var ref: DatabaseReference!
+
+        ref = Database.database().reference()
+
+        ref.child("users/\(uid)/name").getData { (error, snapshot) in
+
+            
+
+            if let error = error {
+
+                print("Error getting data \(error)")
+
+            }
+
+            else if snapshot.exists() {
+
+                self.user.fullname = ("\(snapshot.value!)")
+
+            }
+
+        }
+
+    }
+    
+    
+    
+    
+    
     func saveImage(){
         guard let input = inputImage else {return}
         image = Image(uiImage: input)
@@ -90,7 +123,7 @@ struct HomeView: View {
                         .clipped()
                         .cornerRadius(200)
                     
-                    Text("\(databaseRef.child("users/\(uid)/fullname"))")
+                    Text("\(user.fullname)")
                             .padding()
                     
                     

@@ -7,15 +7,25 @@
 //
 
 import SwiftUI
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
+
 
 struct AddButtonView: View {
     
     @Binding var listings : [Listing]
+   // @State var listing: ListingViewModel = ListingViewModel()
     
     var body: some View {
         
         Button(action: {
             self.listings.append(Listing(image: "joe mama", name: "Tyler", email: "Tyler@NewWaveComputers.com"))
+            
+            guard let uid = Auth.auth().currentUser?.uid else {return}
+                       let database = Database.database().reference()
+                       
+                 //      database.child("listings/\(uid)/listings").setValue(self.user.fullname)
         }){
             Image(systemName: "plus.square.fill")
                 .foregroundColor(.orange)
