@@ -16,10 +16,11 @@ class Listing : Identifiable{
     var type : String // pool, lawn, shoveling, etc.
     var hourlyRate : String
     var numberOfPeople : String
+    var isAccepted : Bool
 
 
 
-    init(image : String = "user", name : String = "name", email : String = "email", experienceRequired : Bool  = false, type : String = "lawn care", hourlyRate : String = "pay rate", numberOfPeople : String = "1"){
+    init(image : String = "user", name : String = "name", email : String = "email", experienceRequired : Bool  = false, type : String = "type", hourlyRate : String = "pay rate", numberOfPeople : String = "# of people", isAccepted : Bool = false){
         self.image = image
         self.name = name
         self.email = email
@@ -27,5 +28,6 @@ class Listing : Identifiable{
         self.type = type
         self.hourlyRate = hourlyRate
         self.numberOfPeople = numberOfPeople
+        self.isAccepted = isAccepted
     }
 }
