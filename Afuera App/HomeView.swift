@@ -111,7 +111,7 @@ struct HomeView: View {
         NavigationView {
             ZStack {
             //background
-                Image("backend").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
+                Image("backend-1").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
                 
                 VStack {
                     Spacer()
