@@ -18,6 +18,16 @@ struct HomeView: View {
     @State private var inputImage: UIImage?
     
     @State var user: UserViewModel = UserViewModel()
+    @State var listings : [Listing] =
+    [Listing(image: "joe mama", name: "Ben", email: "BenSmith@NewWaveComputers.com"),
+     Listing(image: "joe mama", name: "Aslan", email: "BenSmith@NewWaveComputers.com"),
+     Listing(image: "joe mama", name: "Humphrey", email: "BenSmith@NewWaveComputers.com"),
+     Listing(image: "joe mama", name: "Joseph", email: "BenSmith@NewWaveComputers.com"),
+     Listing(image: "joe mama", name: "Kelly", email: "BenSmith@NewWaveComputers.com"),
+     Listing(image: "joe mama", name: "Michael", email: "BenSmith@NewWaveComputers.com"),
+     Listing(image: "joe mama", name: "Prince", email: "BenSmith@NewWaveComputers.com"),
+     Listing(image: "joe mama", name: "Tyler", email: "BenSmith@NewWaveComputers.com")
+        ].sorted(by: {$0.name < $1.name})
     
     
     func loadName() -> String{
@@ -120,7 +130,7 @@ struct HomeView: View {
                     
                     
                     
-                        ListingsButton()
+                    ListingsButton(listings: $listings)
                             .padding()
                     
                         AcceptedListingsButton()

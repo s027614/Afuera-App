@@ -10,8 +10,10 @@ import SwiftUI
 
 struct ListingsButton: View {
     
+    @Binding var listings : [Listing]
+    
     var body: some View {
-        NavigationLink(destination: ListingsView()) {
+        NavigationLink(destination: ListingsView(listings: $listings)) {
             Text("Listings Page")
             .frame(width: 180)
             .padding(.vertical, 15)
@@ -24,6 +26,14 @@ struct ListingsButton: View {
 
 struct ListingsButton_Previews: PreviewProvider {
     static var previews: some View {
-        ListingsButton()
+        ListingsButton(listings: Binding.constant([Listing(image: "joe mama", name: "Ben", email: "BenSmith@NewWaveComputers.com"),
+        Listing(image: "joe mama", name: "Aslan", email: "BenSmith@NewWaveComputers.com"),
+        Listing(image: "joe mama", name: "Humphrey", email: "BenSmith@NewWaveComputers.com"),
+        Listing(image: "joe mama", name: "Joseph", email: "BenSmith@NewWaveComputers.com"),
+        Listing(image: "joe mama", name: "Kelly", email: "BenSmith@NewWaveComputers.com"),
+        Listing(image: "joe mama", name: "Michael", email: "BenSmith@NewWaveComputers.com"),
+        Listing(image: "joe mama", name: "Prince", email: "BenSmith@NewWaveComputers.com"),
+        Listing(image: "joe mama", name: "Tyler", email: "BenSmith@NewWaveComputers.com")
+           ].sorted(by: {$0.name < $1.name})))
     }
 }
