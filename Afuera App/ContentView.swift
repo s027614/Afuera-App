@@ -12,6 +12,7 @@ import FirebaseStorage
 import FirebaseDatabase
 struct ContentView: View {
     @EnvironmentObject var userInfo: UserInfo
+    @EnvironmentObject var user: UserViewModel
     var body: some View {
         
         VStack{

@@ -20,12 +20,13 @@ struct LoginView: View {
     @State var showSheet = false
     @State var action: Action?
     @EnvironmentObject var userInfo: UserInfo
+    @EnvironmentObject var user: UserViewModel
     
     var body: some View {
         SignInWithEmailView(showSheet: $showSheet, action: $action)
             .sheet(isPresented: $showSheet) {
                 if self.action == .signUp{
-                    SignUpView().environmentObject(self.userInfo)
+                    SignUpView().environmentObject(self.userInfo).environmentObject(self.user)
                 }
                 else {
                     ForgotPasswordView()

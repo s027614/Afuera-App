@@ -11,7 +11,7 @@ import FirebaseAuth
 
 struct SignInWithEmailView: View {
     @EnvironmentObject var userInfo: UserInfo
-    @State var user: UserViewModel = UserViewModel()
+    @EnvironmentObject var user: UserViewModel
     @Binding var showSheet: Bool
     @Binding var action:LoginView.Action?
     var body: some View {
@@ -21,7 +21,7 @@ struct SignInWithEmailView: View {
                       text: self.$user.email)
                 .autocapitalization(.none)
                 .keyboardType(.emailAddress)
-            SecureField("Password", text: $user.password)
+            SecureField("Password", text: self.$user.password)
             HStack {
                 Spacer()
                 Button(action: {
@@ -35,6 +35,7 @@ struct SignInWithEmailView: View {
                 Button(action: {
                     Auth.auth().signIn(withEmail: self.user.email, password: self.user.password) { (user, error) in
                         self.userInfo.configureFirebaseStateDidChange()
+                        self.user.getData()
                     }
                 }) {
                     Text("Login")
