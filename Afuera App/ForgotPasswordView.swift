@@ -12,7 +12,7 @@ import FirebaseStorage
 import FirebaseDatabase
 
 struct ForgotPasswordView: View {
-    @State var user: UserViewModel = UserViewModel()
+    @EnvironmentObject var user: UserViewModel
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         NavigationView {

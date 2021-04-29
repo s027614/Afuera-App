@@ -17,33 +17,10 @@ struct HomeView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     
-    @State var user: UserViewModel = UserViewModel()
+    @EnvironmentObject var user: UserViewModel
     
     
-    func loadName() -> String{
-
-        guard let uid  = Auth.auth().currentUser?.uid else {return " "}
-
-        var ref: DatabaseReference!
-        var r = "name"
-
-        ref = Database.database().reference()
-
-        ref.child("users/\(uid)/name").getData { (error, snapshot) in
-
-            if let error = error {
-
-                print("Error getting data \(error)")
-
-            }
-
-             r = snapshot.value! as! String
-
-        }
-        
-        return r
-
-    }
+    
     
     
     
@@ -100,7 +77,7 @@ struct HomeView: View {
                         .clipped()
                         .cornerRadius(200)
                     
-                    Text("\(loadName())")
+                    Text("\(self.user.fullname)")
                             .padding()
                     
                     

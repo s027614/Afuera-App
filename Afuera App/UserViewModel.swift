@@ -7,14 +7,49 @@
 //
 
 import Foundation
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
-struct UserViewModel {
-    var email: String = ""
+class UserViewModel: ObservableObject {
+    @Published var email: String = ""
     var password: String = ""
-    var fullname: String = ""
-    var address: String = ""
-    var zipcode: String = ""
+    @Published var fullname: String = ""
+    @Published var address: String = ""
+    @Published var zipcode: String = ""
     var confirmPassword: String = ""
+    
+    init(){
+        getData()
+    }
+    
+    func getData(){
+
+        guard let uid  = Auth.auth().currentUser?.uid else {return}
+
+        var ref: DatabaseReference!
+        
+
+        ref = Database.database().reference()
+
+        ref.child("users/\(uid)/name").getData { (error, snapshot) in
+
+            if snapshot.exists() {
+
+                let value = snapshot.value ?? " "
+
+                self.fullname = snapshot.value! as! String
+
+            }
+
+             
+        }
+        
+
+    }
+    
+    
+    
     
     // MARK: - Validation Checks
     
