@@ -79,7 +79,7 @@ struct SignUpView: View {
                                 
                                 database.child("users/\(uid)/zipcode").setValue(self.user.zipcode)
                                 
-                                self.user.getData()
+                                
                                 
                             }
                             else{

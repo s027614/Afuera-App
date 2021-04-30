@@ -13,7 +13,6 @@
 		2FA492D4260D09DF0086317B /* LoadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FED626027EDE00FF405D /* LoadImage.swift */; };
 		2FA492D5260D09E10086317B /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEDA26027EDE00FF405D /* ForgotPasswordView.swift */; };
 		2FA492D6260D09E50086317B /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BED8FEDB26027EDE00FF405D /* SignUpView.swift */; };
-		2FDB8097263854B300A1513A /* ListingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDB8096263854B200A1513A /* ListingViewModel.swift */; };
 		2FED4C9A25FA76610016213D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4C9925FA76610016213D /* AppDelegate.swift */; };
 		2FED4C9C25FA76610016213D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4C9B25FA76610016213D /* SceneDelegate.swift */; };
 		2FED4C9E25FA76610016213D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FED4C9D25FA76610016213D /* ContentView.swift */; };
@@ -30,7 +29,6 @@
 		9070FA4A2625EF420063F6FE /* ListingDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA492625EF420063F6FE /* ListingDetail.swift */; };
 		9070FA4C2625F0510063F6FE /* Listing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA4B2625F0510063F6FE /* Listing.swift */; };
 		9070FA4E262757890063F6FE /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA4D262757890063F6FE /* CardView.swift */; };
-		9070FA502627E03C0063F6FE /* AddButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA4F2627E03C0063F6FE /* AddButtonView.swift */; };
 		9070FA522627ECB30063F6FE /* AddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9070FA512627ECB30063F6FE /* AddButton.swift */; };
 		909077832603D0FF007F370C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909077822603D0FF007F370C /* HomeView.swift */; };
 		9104E442B2543AC184D6C4A2 /* Pods_Afuera_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88DF89510724EF191FB8D82F /* Pods_Afuera_App.framework */; };
@@ -57,7 +55,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2FDB8096263854B200A1513A /* ListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
 		2FED4C9625FA76610016213D /* Roots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FED4C9925FA76610016213D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FED4C9B25FA76610016213D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +78,6 @@
 		9070FA492625EF420063F6FE /* ListingDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetail.swift; sourceTree = "<group>"; };
 		9070FA4B2625F0510063F6FE /* Listing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Listing.swift; sourceTree = "<group>"; };
 		9070FA4D262757890063F6FE /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
-		9070FA4F2627E03C0063F6FE /* AddButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButtonView.swift; sourceTree = "<group>"; };
 		9070FA512627ECB30063F6FE /* AddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddButton.swift; sourceTree = "<group>"; };
 		909077822603D0FF007F370C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		9BEB820DCDDDBA0E3AB3AE8A /* Pods-Afuera App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Afuera App.debug.xcconfig"; path = "Target Support Files/Pods-Afuera App/Pods-Afuera App.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,7 +146,6 @@
 			children = (
 				BED8FEDC2602848E00FF405D /* UserInfo.swift */,
 				BED8FEDE2602849200FF405D /* UserViewModel.swift */,
-				2FDB8096263854B200A1513A /* ListingViewModel.swift */,
 				2FED4C9925FA76610016213D /* AppDelegate.swift */,
 				BED8FEDB26027EDE00FF405D /* SignUpView.swift */,
 				BED8FED626027EDE00FF405D /* LoadImage.swift */,
@@ -161,14 +156,13 @@
 				BED8FED526027EDE00FF405D /* SignInWithEmailView.swift */,
 				9070FA492625EF420063F6FE /* ListingDetail.swift */,
 				90499412262F5A0600BD5B1A /* ListingDetailUneditable.swift */,
+				9070FA4B2625F0510063F6FE /* Listing.swift */,
 				9070FA4D262757890063F6FE /* CardView.swift */,
 				BE319A89261CAE77007C8BDF /* ListingsView.swift */,
 				9049940E262F327500BD5B1A /* AcceptedListingsView.swift */,
-				9070FA4B2625F0510063F6FE /* Listing.swift */,
 				9070FA512627ECB30063F6FE /* AddButton.swift */,
 				9049940C2628BD5900BD5B1A /* ListingsButton.swift */,
 				90499410262F329100BD5B1A /* AcceptedListingsButton.swift */,
-				9070FA4F2627E03C0063F6FE /* AddButtonView.swift */,
 				2FED4C9D25FA76610016213D /* ContentView.swift */,
 				2FED4C9B25FA76610016213D /* SceneDelegate.swift */,
 				2FED4C9F25FA76630016213D /* Assets.xcassets */,
@@ -400,7 +394,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FA492D3260D09DD0086317B /* SignInWithEmailView.swift in Sources */,
-				2FDB8097263854B300A1513A /* ListingViewModel.swift in Sources */,
 				BE319A8A261CAE77007C8BDF /* ListingsView.swift in Sources */,
 				90499413262F5A0600BD5B1A /* ListingDetailUneditable.swift in Sources */,
 				9049940D2628BD5900BD5B1A /* ListingsButton.swift in Sources */,
@@ -416,7 +409,6 @@
 				909077832603D0FF007F370C /* HomeView.swift in Sources */,
 				2FA492D2260D08970086317B /* ImagePicker.swift in Sources */,
 				9049940F262F327500BD5B1A /* AcceptedListingsView.swift in Sources */,
-				9070FA502627E03C0063F6FE /* AddButtonView.swift in Sources */,
 				9070FA4A2625EF420063F6FE /* ListingDetail.swift in Sources */,
 				BED8FEDF2602849300FF405D /* UserViewModel.swift in Sources */,
 				9070FA4E262757890063F6FE /* CardView.swift in Sources */,

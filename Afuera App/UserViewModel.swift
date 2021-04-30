@@ -17,6 +17,7 @@ class UserViewModel: ObservableObject {
     @Published var fullname: String = ""
     @Published var address: String = ""
     @Published var zipcode: String = ""
+    @Published var userListings: [Listing] = []
     var confirmPassword: String = ""
     
     init(){
