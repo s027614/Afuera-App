@@ -7,28 +7,32 @@
 //
 
 import SwiftUI
-
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 struct ListingDetail: View {
     
+    @EnvironmentObject var userInfo: UserInfo
+    @EnvironmentObject var user: UserViewModel
     @Binding var listing : Listing
     @Binding var listings : [Listing]
-    var activityTypeOptions : [String] = ["Yardwork","Shoveling","Pool Care"]
-    var numberOfPeopleOptions : [String] = ["1", "2", "3", "4+"]
+    var activityTypeOptions : [String] = ["Lawn Mowing","Shoveling","Pool Care", "Car Washing", ""]
+    var numberOfPeopleOptions : [String] = ["1", "2", "3+"]
     
     
     var body: some View {
         VStack {
-            Image(listing.image)
+            Image("brown-1")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .clipShape(Circle())
-                .frame(width: 150, height: 150, alignment: .center)
+               // .clipShape(Circle())
+                .frame(width: 100, height: 100, alignment: .center)
             
             Form {
                 Section {
                     TextField("Username", text: $listing.name)
-                        .font(.system(size: 30))
+                        .font(.system(size: 25))
                     TextField("Email Address", text: $listing.email)
                         .font(.system(size: 20))
                 }
@@ -55,6 +59,11 @@ struct ListingDetail: View {
             }
             Button(action: {
                 self.listings.append(self.listing)
+                
+                guard let uid = Auth.auth().currentUser?.uid else {return}
+                let database = Database.database().reference()
+                
+                database.child("users/\(uid)/userListings").setValue(self.listings)
             }) {
                 Text("Add Button")
             }
