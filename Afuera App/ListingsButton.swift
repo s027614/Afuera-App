@@ -11,9 +11,10 @@ import SwiftUI
 struct ListingsButton: View {
     
     @Binding var listings : [Listing]
+    @Binding var acceptedListings : [Listing]
     
     var body: some View {
-        NavigationLink(destination: ListingsView(listings: $listings)) {
+        NavigationLink(destination: ListingsView(listings: self.$listings, acceptedListings: self.$acceptedListings)) {
             Text("Listings Page")
             .frame(width: 180)
             .padding(.vertical, 15)
@@ -34,6 +35,6 @@ struct ListingsButton_Previews: PreviewProvider {
         Listing(image: "joe mama", name: "Michael", email: "BenSmith@NewWaveComputers.com"),
         Listing(image: "joe mama", name: "Prince", email: "BenSmith@NewWaveComputers.com"),
         Listing(image: "joe mama", name: "Tyler", email: "BenSmith@NewWaveComputers.com")
-           ].sorted(by: {$0.name < $1.name})))
+            ].sorted(by: {$0.name < $1.name})), acceptedListings: Binding.constant([Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]))
     }
 }

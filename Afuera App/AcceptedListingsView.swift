@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AcceptedListingsView: View {
     
-    @State var acceptedListings : [Listing] = [Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]
+    @Binding var acceptedListings : [Listing]
     
     var body: some View {
 
@@ -20,11 +20,9 @@ struct AcceptedListingsView: View {
                 
                 List{
                     
-                    CardView(listing: self.$acceptedListings[0], listings: self.$acceptedListings)
-                    CardView(listing: self.$acceptedListings[0], listings: self.$acceptedListings)
-                    CardView(listing: self.$acceptedListings[0], listings: self.$acceptedListings)
-                    CardView(listing: self.$acceptedListings[0], listings: self.$acceptedListings)
-                    CardView(listing: self.$acceptedListings[0], listings: self.$acceptedListings)
+                    ForEach(0..<acceptedListings.count) { value in
+                        CardView(listing: self.$acceptedListings[value], listings: self.$acceptedListings, acceptedListings: self.$acceptedListings)
+                    }
                     
                     }
                 }.navigationBarTitle("Your Listings")
@@ -36,6 +34,6 @@ struct AcceptedListingsView: View {
 
 struct AcceptedListingsView_Previews: PreviewProvider {
     static var previews: some View {
-        AcceptedListingsView()
+        AcceptedListingsView(acceptedListings: Binding.constant([Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]))
     }
 }

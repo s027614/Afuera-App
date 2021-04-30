@@ -10,8 +10,10 @@ import SwiftUI
 
 struct AcceptedListingsButton: View {
     
+    @Binding var acceptedListings : [Listing]
+    
     var body: some View {
-        NavigationLink(destination: AcceptedListingsView()) {
+        NavigationLink(destination: AcceptedListingsView(acceptedListings: $acceptedListings)) {
             Text("Accepted Listings")
             .frame(width: 180)
             .padding(.vertical, 15)
@@ -24,6 +26,6 @@ struct AcceptedListingsButton: View {
 
 struct AcceptedListingsButton_Previews: PreviewProvider {
     static var previews: some View {
-        AcceptedListingsButton()
+        AcceptedListingsButton(acceptedListings: Binding.constant([Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]))
     }
 }
