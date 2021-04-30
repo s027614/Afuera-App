@@ -17,7 +17,7 @@ struct AcceptedListingsView: View {
         VStack {
             
             NavigationView{
-                
+               
                 List{
                     
                     ForEach(0..<acceptedListings.count) { value in

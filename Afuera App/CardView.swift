@@ -24,7 +24,7 @@ struct CardView: View {
 
             NavigationLink(destination: ListingDetailUneditable(listing: self.$listing, listings : self.$listings, acceptedListings: self.$acceptedListings)) {
                 VStack(alignment: .leading){
-                    Text(listing.name).font(.system(size: 30))
+                    Text("\(listing.type) for \(listing.name)").font(.system(size: 25))
                         .foregroundColor(.orange)
                         .minimumScaleFactor(0.0001)
                         .lineLimit(1)

@@ -19,11 +19,32 @@ struct ListingDetailUneditable: View {
     
     var body: some View {
         VStack {
-            Image(listing.image)
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .clipShape(Circle())
-                .frame(width: 150, height: 150, alignment: .center)
+           if self.listing.type == "Lawn Mowing"{
+               
+           Image("yard work")
+               .resizable()
+               .aspectRatio(contentMode: .fill)
+               .clipShape(Circle())
+               .frame(width: 150, height: 150, alignment: .center)
+           }
+           
+           else if self.listing.type == "Shoveling"{
+               
+           Image("shoveling")
+               .resizable()
+               .aspectRatio(contentMode: .fill)
+               .clipShape(Circle())
+               .frame(width: 150, height: 150, alignment: .center)
+           }
+           
+           else if self.listing.type == "Pool Care"{
+               
+           Image("pool care")
+               .resizable()
+               .aspectRatio(contentMode: .fill)
+               .clipShape(Circle())
+               .frame(width: 150, height: 150, alignment: .center)
+           }
             
             Form {
                 Section {
