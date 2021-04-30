@@ -69,26 +69,22 @@ struct HomeView: View {
         }
     }
     var body: some View {
-        
-        
-        
             ZStack {
-            //background
+                //background
                 Image("backend-1").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
-                
+               
+            NavigationView{
                 VStack {
-                    Spacer()
-                    
+                    //Spacer()
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 150, height: 150, alignment: .center)
                         .clipped()
                         .cornerRadius(200)
-                    
-                  //  Text("\(self.user.fullname)")
-                            .padding()
-                    
+                        
+                        //  Text("\(self.user.fullname)")
+                        .padding()
                     
                     
                     Button(action: {
@@ -104,17 +100,18 @@ struct HomeView: View {
                     
                     
                     
-                    
-                  NavigationView {
-                    ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings)
+
+                    HStack {
+                        ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings)
                             .padding()
-                    
-                    AcceptedListingsButton(acceptedListings: self.$acceptedListings)
+                            
+                        AcceptedListingsButton(acceptedListings: self.$acceptedListings)
                             .padding()
+                        }
                     
                     
-                    Spacer()
-        
+                    //Spacer()
+                    
                     
                     
                     Button(action: {
@@ -129,17 +126,18 @@ struct HomeView: View {
                             .foregroundColor(.white)
                         
                     }.padding()
-                    Spacer()
+                    //Spacer()
                 }.sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
                     ImagePicker(image: self.$inputImage)
                     
+                    }
+                    
                 }
-                }
-                
-                
-            }
         }
+            
     }
+        
+}
 
 
 
@@ -150,3 +148,4 @@ struct HomeView_Previews: PreviewProvider {
         HomeView()
     }
 }
+
