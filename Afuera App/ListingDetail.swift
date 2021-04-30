@@ -15,6 +15,7 @@ struct ListingDetail: View {
     
     @EnvironmentObject var userInfo: UserInfo
     @EnvironmentObject var user: UserViewModel
+    @Environment(\.presentationMode) var presentationMode
     @Binding var listing : Listing
     @Binding var listings : [Listing]
     var activityTypeOptions : [String] = ["Lawn Mowing","Shoveling","Pool Care"]
@@ -60,10 +61,7 @@ struct ListingDetail: View {
             Button(action: {
                 self.listings.append(self.listing)
                 
-                guard let uid = Auth.auth().currentUser?.uid else {return}
-                let database = Database.database().reference()
-                
-                database.child("users/\(uid)/userListings").setValue(self.listings)
+
             }) {
                 Text("Add Button")
             }
