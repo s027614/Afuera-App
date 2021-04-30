@@ -46,6 +46,23 @@ struct ListingDetailUneditable: View {
                .frame(width: 150, height: 150, alignment: .center)
            }
             
+            else if self.listing.type == "Christmas Lights"{
+                
+            Image("christmas lights")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .clipShape(Circle())
+                .frame(width: 150, height: 150, alignment: .center)
+            }
+            
+            else if self.listing.type == "Landscaping"{
+                
+            Image("landscaping")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .clipShape(Circle())
+                .frame(width: 150, height: 150, alignment: .center)
+            }
             Form {
                 Section {
                     Text("Name: \(self.listing.name)")

@@ -18,7 +18,7 @@ struct ListingDetail: View {
     @Environment(\.presentationMode) var presentationMode
     @Binding var listing : Listing
     @Binding var listings : [Listing]
-    var activityTypeOptions : [String] = ["Lawn Mowing","Shoveling","Pool Care"]
+    var activityTypeOptions : [String] = ["Lawn Mowing","Shoveling","Pool Care", "Christmas Lights", "Landscaping"]
     var numberOfPeopleOptions : [String] = ["1", "2", "3+"]
     
     
