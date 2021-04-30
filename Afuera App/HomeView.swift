@@ -17,43 +17,10 @@ struct HomeView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     
-    @State var user: UserViewModel = UserViewModel()
-    @State var listings : [Listing] =
-    [Listing(image: "joe mama", name: "Ben", email: "BenSmith@NewWaveComputers.com"),
-     Listing(image: "joe mama", name: "Aslan", email: "BenSmith@NewWaveComputers.com"),
-     Listing(image: "joe mama", name: "Humphrey", email: "BenSmith@NewWaveComputers.com"),
-     Listing(image: "joe mama", name: "Joseph", email: "BenSmith@NewWaveComputers.com"),
-     Listing(image: "joe mama", name: "Kelly", email: "BenSmith@NewWaveComputers.com"),
-     Listing(image: "joe mama", name: "Michael", email: "BenSmith@NewWaveComputers.com"),
-     Listing(image: "joe mama", name: "Prince", email: "BenSmith@NewWaveComputers.com"),
-     Listing(image: "joe mama", name: "Tyler", email: "BenSmith@NewWaveComputers.com")
-        ].sorted(by: {$0.name < $1.name})
+    @EnvironmentObject var user: UserViewModel
     
     
-    func loadName() -> String{
-
-        guard let uid  = Auth.auth().currentUser?.uid else {return " "}
-
-        var ref: DatabaseReference!
-        var r = "name"
-
-        ref = Database.database().reference()
-
-        ref.child("users/\(uid)/name").getData { (error, snapshot) in
-
-            if let error = error {
-
-                print("Error getting data \(error)")
-
-            }
-
-             r = snapshot.value! as! String
-
-        }
-        
-        return r
-
-    }
+    
     
     
     
@@ -110,7 +77,7 @@ struct HomeView: View {
                         .clipped()
                         .cornerRadius(200)
                     
-                    Text("\(loadName())")
+                    Text("\(self.user.fullname)")
                             .padding()
                     
                     

@@ -58,7 +58,7 @@
 
 /* Begin PBXFileReference section */
 		2FDB8096263854B200A1513A /* ListingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingViewModel.swift; sourceTree = "<group>"; };
-		2FED4C9625FA76610016213D /* Afuera App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Afuera App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FED4C9625FA76610016213D /* Roots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Roots.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FED4C9925FA76610016213D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FED4C9B25FA76610016213D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2FED4C9D25FA76610016213D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,7 +138,7 @@
 		2FED4C9725FA76610016213D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2FED4C9625FA76610016213D /* Afuera App.app */,
+				2FED4C9625FA76610016213D /* Roots.app */,
 				2FED4CAC25FA76630016213D /* Afuera AppTests.xctest */,
 				2FED4CB725FA76630016213D /* Afuera AppUITests.xctest */,
 			);
@@ -242,7 +242,7 @@
 			);
 			name = "Afuera App";
 			productName = "Afuera App";
-			productReference = 2FED4C9625FA76610016213D /* Afuera App.app */;
+			productReference = 2FED4C9625FA76610016213D /* Roots.app */;
 			productType = "com.apple.product-type.application";
 		};
 		2FED4CAB25FA76630016213D /* Afuera AppTests */ = {
@@ -596,7 +596,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "NewWveComputers.Afuera-App";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Roots;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -616,7 +616,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "NewWveComputers.Afuera-App";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Roots;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 struct SignUpView: View {
     @EnvironmentObject var userInfo: UserInfo
-    @State var user: UserViewModel = UserViewModel()
+    @EnvironmentObject var user: UserViewModel
     @Environment(\.presentationMode) var presentationMode
     
     var body: some View {
@@ -79,6 +79,7 @@ struct SignUpView: View {
                                 
                                 database.child("users/\(uid)/zipcode").setValue(self.user.zipcode)
                                 
+                                self.user.getData()
                                 
                             }
                             else{
