@@ -17,7 +17,7 @@ struct ListingDetail: View {
     @EnvironmentObject var user: UserViewModel
     @Binding var listing : Listing
     @Binding var listings : [Listing]
-    var activityTypeOptions : [String] = ["Lawn Mowing","Shoveling","Pool Care", "Car Washing", ""]
+    var activityTypeOptions : [String] = ["Lawn Mowing","Shoveling","Pool Care"]
     var numberOfPeopleOptions : [String] = ["1", "2", "3+"]
     
     
