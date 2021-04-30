@@ -16,6 +16,16 @@ struct HomeView: View {
     @State private var image: Image = Image("joe mama")
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
+    @State var listings : [Listing] = [Listing(image: "joe mama", name: "Ben", email: "BenSmith@NewWaveComputers.com"),
+    Listing(image: "joe mama", name: "Aslan", email: "BenSmith@NewWaveComputers.com"),
+    Listing(image: "joe mama", name: "Humphrey", email: "BenSmith@NewWaveComputers.com"),
+    Listing(image: "joe mama", name: "Joseph", email: "BenSmith@NewWaveComputers.com"),
+    Listing(image: "joe mama", name: "Kelly", email: "BenSmith@NewWaveComputers.com"),
+    Listing(image: "joe mama", name: "Michael", email: "BenSmith@NewWaveComputers.com"),
+    Listing(image: "joe mama", name: "Prince", email: "BenSmith@NewWaveComputers.com"),
+    Listing(image: "joe mama", name: "Tyler", email: "BenSmith@NewWaveComputers.com")
+       ].sorted(by: {$0.name < $1.name})
+    @State var acceptedListings : [Listing] = [Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]
     
     @EnvironmentObject var user: UserViewModel
     
@@ -62,7 +72,6 @@ struct HomeView: View {
         
         
         
-        NavigationView {
             ZStack {
             //background
                 Image("backend-1").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
@@ -77,7 +86,7 @@ struct HomeView: View {
                         .clipped()
                         .cornerRadius(200)
                     
-                    Text("\(self.user.fullname)")
+                  //  Text("\(self.user.fullname)")
                             .padding()
                     
                     
@@ -96,11 +105,11 @@ struct HomeView: View {
                     
                     
                     
-                    
-                    ListingsButton(listings: $listings)
+                  NavigationView {
+                    ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings)
                             .padding()
                     
-                        AcceptedListingsButton()
+                    AcceptedListingsButton(acceptedListings: self.$acceptedListings)
                             .padding()
                     
                     
@@ -125,26 +134,12 @@ struct HomeView: View {
                     ImagePicker(image: self.$inputImage)
                     
                 }
+                }
                 
                 
             }
         }
-        
-        
-        
-        //            VStack {
-        //                //name
-        //
-        //                Text("MOD").foregroundColor(Color.white).position(x: 210, y: 5)
-        //                Spacer()
-        //                //game title
-        //                Text("MOD").fontWeight(.heavy).foregroundColor(Color.red)
-        //                    .font(.largeTitle).position(x: 210, y: 230)
-        //                Spacer()
-        //            }
-        //        }
     }
-}
 
 
 

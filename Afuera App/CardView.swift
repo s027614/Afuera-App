@@ -12,6 +12,7 @@ struct CardView: View {
     
     @Binding var listing : Listing
     @Binding var listings : [Listing]
+    @Binding var acceptedListings : [Listing]
     
     var body: some View {
         HStack{
@@ -21,7 +22,7 @@ struct CardView: View {
                 .frame(width: 100, height: 100, alignment: .center)
                 .clipped()
 
-            NavigationLink(destination: ListingDetailUneditable(listing: $listing, listings : $listings)) {
+            NavigationLink(destination: ListingDetailUneditable(listing: self.$listing, listings : self.$listings, acceptedListings: self.$acceptedListings)) {
                 VStack(alignment: .leading){
                     Text(listing.name).font(.system(size: 30))
                         .foregroundColor(.orange)
@@ -40,6 +41,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(listing: Binding.constant(Listing(image: "joe mama", name: "Ben", email: "BenSmith@NewWaveComputers.com")), listings: Binding.constant([Listing(image: "ben", name: "Ben", email: "BenSmith@NewWaveComputers.com")]))
+        CardView(listing: Binding.constant(Listing(image: "joe mama", name: "Ben", email: "BenSmith@NewWaveComputers.com")), listings: Binding.constant([Listing(image: "ben", name: "Ben", email: "BenSmith@NewWaveComputers.com")]), acceptedListings: Binding.constant([Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]))
     }
 }

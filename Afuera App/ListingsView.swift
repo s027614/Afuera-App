@@ -12,6 +12,7 @@ struct ListingsView: View {
     
     
     @Binding var listings : [Listing]
+    @Binding var acceptedListings : [Listing]
     
     var body: some View {
 
@@ -24,7 +25,7 @@ struct ListingsView: View {
                     AddButton(listings: $listings)
                 
                     ForEach(0..<listings.count) { value in
-                        CardView(listing: self.$listings[value], listings: self.$listings)
+                        CardView(listing: self.$listings[value], listings: self.$listings, acceptedListings: self.$acceptedListings)
                     }
 
 
@@ -46,6 +47,6 @@ struct ListingsView_Previews: PreviewProvider {
         Listing(image: "joe mama", name: "Michael", email: "BenSmith@NewWaveComputers.com"),
         Listing(image: "joe mama", name: "Prince", email: "BenSmith@NewWaveComputers.com"),
         Listing(image: "joe mama", name: "Tyler", email: "BenSmith@NewWaveComputers.com")
-           ].sorted(by: {$0.name < $1.name})))
+            ].sorted(by: {$0.name < $1.name})), acceptedListings: Binding.constant([Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]))
     }
 }

@@ -13,6 +13,7 @@ struct ListingDetailUneditable: View {
     
     @Binding var listing : Listing
     @Binding var listings : [Listing]
+    @Binding var acceptedListings : [Listing]
     @Environment(\.presentationMode) var presentationMode
     
     
@@ -49,7 +50,8 @@ struct ListingDetailUneditable: View {
             
             if self.listing.isAccepted == false {
                 Button(action: {
-                    self.listings.append(self.listing)
+               //     self.listings.remove(at: 1)
+                    self.acceptedListings.append(self.listing)
                     self.listing.isAccepted = true
                     self.presentationMode.wrappedValue.dismiss()
                     
@@ -63,6 +65,6 @@ struct ListingDetailUneditable: View {
 
 struct ListingDetailUneditable_Previews: PreviewProvider {
     static var previews: some View {
-        ListingDetailUneditable(listing: Binding.constant(Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")), listings: Binding.constant([Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")]))
+        ListingDetailUneditable(listing: Binding.constant(Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")), listings: Binding.constant([Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")]), acceptedListings: Binding.constant([Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]))
     }
 }
