@@ -72,74 +72,77 @@ struct HomeView: View {
         
         
         
-            ZStack {
+        ZStack {
             //background
-                Image("backend-1").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
+            Image("backend-1").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
+            
+            VStack {
+                Spacer()
                 
-                VStack {
-                    Spacer()
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 150, height: 150, alignment: .center)
+                    .clipped()
+                    .cornerRadius(200)
                     
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: 150, height: 150, alignment: .center)
-                        .clipped()
-                        .cornerRadius(200)
-                    
-                  //  Text("\(self.user.fullname)")
-                            .padding()
-                    
-                    
-                    
-                    Button(action: {
-                        self.showingImagePicker = true
-                    }) {
-                        Text("Change Image")
-                            .frame(width: 180)
-                            .padding(.vertical, 15)
-                            .background(Color.blue)
-                            .cornerRadius(8)
-                            .foregroundColor(.white)
-                    }.padding()
-                    
-                    
-                    
-                    
-                  NavigationView {
+                    //  Text("\(self.user.fullname)")
+                    .padding()
+                
+                
+                
+                Button(action: {
+                    self.showingImagePicker = true
+                }) {
+                    Text("Change Image")
+                        .frame(width: 180)
+                        .padding(.vertical, 15)
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                }.padding()
+                
+                
+                
+                
+                NavigationView {
                     ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings)
-                            .padding()
-                    
-                    AcceptedListingsButton(acceptedListings: self.$acceptedListings)
-                            .padding()
-                    
-                    
-                    Spacer()
-        
-                    
-                    
-                    Button(action: {
-                        try! Auth.auth().signOut()
-                        self.userInfo.configureFirebaseStateDidChange()
-                    }) {
-                        Text("Log Out")
-                            .frame(width: 180)
-                            .padding(.vertical, 15)
-                            .background(Color.blue)
-                            .cornerRadius(8)
-                            .foregroundColor(.white)
-                        
-                    }.padding()
-                    Spacer()
-                }.sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
-                    ImagePicker(image: self.$inputImage)
-                    
-                }
+                        .padding()
                 }
                 
+                NavigationView {
+                    AcceptedListingsButton(acceptedListings: self.$acceptedListings)
+                        .padding()
+                }
+                
+                
+                Spacer()
+                
+                
+                
+                Button(action: {
+                    try! Auth.auth().signOut()
+                    self.userInfo.configureFirebaseStateDidChange()
+                }) {
+                    Text("Log Out")
+                        .frame(width: 180)
+                        .padding(.vertical, 15)
+                        .background(Color.blue)
+                        .cornerRadius(8)
+                        .foregroundColor(.white)
+                    
+                }.padding()
+                Spacer()
+            }.sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
+                ImagePicker(image: self.$inputImage)
                 
             }
+            
+            
         }
     }
+}
+
 
 
 

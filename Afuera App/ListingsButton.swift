@@ -14,7 +14,7 @@ struct ListingsButton: View {
     @Binding var acceptedListings : [Listing]
     
     var body: some View {
-        NavigationLink(destination: ListingsView(listings: self.$listings, acceptedListings: self.$acceptedListings)) {
+        NavigationLink(destination: ListingsView(listings: $listings, acceptedListings: $acceptedListings)) {
             Text("Listings Page")
             .frame(width: 180)
             .padding(.vertical, 15)
