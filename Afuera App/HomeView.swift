@@ -104,15 +104,14 @@ struct HomeView: View {
                 
                 
                 
-                
                 NavigationView {
-                    ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings)
-                        .padding()
-                }
-                
-                NavigationView {
-                    AcceptedListingsButton(acceptedListings: self.$acceptedListings)
-                        .padding()
+                    HStack {
+                        ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings)
+                            .padding()
+                        
+                        AcceptedListingsButton(acceptedListings: self.$acceptedListings)
+                            .padding()
+                    }
                 }
                 
                 
@@ -137,11 +136,10 @@ struct HomeView: View {
                 ImagePicker(image: self.$inputImage)
                 
             }
-            
-            
         }
     }
 }
+
 
 
 
