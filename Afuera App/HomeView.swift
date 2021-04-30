@@ -69,15 +69,13 @@ struct HomeView: View {
         }
     }
     var body: some View {
-        
-        NavigationView{
             ZStack {
                 //background
                 Image("backend-1").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
-                
+               
+            NavigationView{
                 VStack {
                     //Spacer()
-                    
                     image
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -87,7 +85,6 @@ struct HomeView: View {
                         
                         //  Text("\(self.user.fullname)")
                         .padding()
-                    
                     
                     
                     Button(action: {
@@ -103,13 +100,15 @@ struct HomeView: View {
                     
                     
                     
+
                     HStack {
                         ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings)
                             .padding()
-                        
+                            
                         AcceptedListingsButton(acceptedListings: self.$acceptedListings)
                             .padding()
-                    }
+                        }
+                    
                     
                     //Spacer()
                     
@@ -131,13 +130,14 @@ struct HomeView: View {
                 }.sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
                     ImagePicker(image: self.$inputImage)
                     
+                    }
+                    
                 }
-            }
         }
+            
     }
+        
 }
-
-
 
 
 
