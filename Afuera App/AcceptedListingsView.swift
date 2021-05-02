@@ -11,6 +11,18 @@ import SwiftUI
 struct AcceptedListingsView: View {
     
     @Binding var acceptedListings : [Listing]
+     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @GestureState private var dragOffset = CGSize.zero
+
+    
+    var btnBack : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+    }) {
+        HStack {
+            Text("")
+        }
+        }
+    }
     
     var body: some View {
 
@@ -23,9 +35,18 @@ struct AcceptedListingsView: View {
                     ForEach(0..<acceptedListings.count) { value in
                         CardView(listing: self.$acceptedListings[value], listings: self.$acceptedListings, acceptedListings: self.$acceptedListings)
                     }
-                    
                     }
-                }.navigationBarTitle("Your Listings")
+                }.navigationBarTitle("Your Listings").navigationBarBackButtonHidden(true)
+                .navigationBarItems(leading: btnBack).gesture(DragGesture().updating($dragOffset, body: { (value, state, transaction) in
+                        if(value.startLocation.x < 20 &&
+                            value.translation.width > 100) {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                    })
+                        // .navigationBarItems(trailing: AddButton(listings: $listings))
+                        
+                        
+                )
                // .navigationBarItems(trailing: AddButton(listings: $listings))
         }
     }

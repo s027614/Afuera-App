@@ -13,28 +13,46 @@ struct ListingsView: View {
     
     @Binding var listings : [Listing]
     @Binding var acceptedListings : [Listing]
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @GestureState private var dragOffset = CGSize.zero
     
+    var btnBack : some View { Button(action: {
+        self.presentationMode.wrappedValue.dismiss()
+    }) {
+        HStack {
+            Text("")
+        }
+        }
+    }
     var body: some View {
-
+        
         VStack {
-            
+              Image("brown-1").resizable().aspectRatio(contentMode: .fit).padding(.all, 7.0)
             NavigationView{
                 
                 List{
                     
                     AddButton(listings: $listings)
-                
+                    
                     ForEach(0..<listings.count) { value in
                         CardView(listing: self.$listings[value], listings: self.$listings, acceptedListings: self.$acceptedListings)
                     }
-
-
-                }.navigationBarTitle("Listings")
-               // .navigationBarItems(trailing: AddButton(listings: $listings))
-            }
+                }
+                    
+                }.navigationBarTitle("Listings").navigationBarBackButtonHidden(true)
+                    .navigationBarItems(leading: btnBack)
+                    .gesture(DragGesture().updating($dragOffset, body: { (value, state, transaction) in
+                        if(value.startLocation.x < 20 &&
+                            value.translation.width > 100) {
+                            self.presentationMode.wrappedValue.dismiss()
+                        }
+                    })
+                        // .navigationBarItems(trailing: AddButton(listings: $listings))
+                        
+                        
+                )}
         }
     }
-}
 
 
 struct ListingsView_Previews: PreviewProvider {
