@@ -90,9 +90,9 @@ struct HomeView: View {
                         self.showingImagePicker = true
                     }) {
                         Text("Change Image")
-                            .frame(width: 180)
+                            .frame(width: 120)
                             .padding(.vertical, 15)
-                            .background(Color.blue)
+                            .background(Color.green)
                             .cornerRadius(8)
                             .foregroundColor(.white)
                     }.padding()
@@ -100,13 +100,13 @@ struct HomeView: View {
                     
                     
 
-                    HStack {
+                    
                         ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings)
                             .padding()
                             
                         AcceptedListingsButton(acceptedListings: self.$acceptedListings)
                             .padding()
-                        }
+                        
                     
                     
                     //Spacer()
@@ -118,9 +118,9 @@ struct HomeView: View {
                         self.userInfo.configureFirebaseStateDidChange()
                     }) {
                         Text("Log Out")
-                            .frame(width: 180)
+                            .frame(width: 80)
                             .padding(.vertical, 15)
-                            .background(Color.blue)
+                            .background(Color("brown"))
                             .cornerRadius(8)
                             .foregroundColor(.white)
                         

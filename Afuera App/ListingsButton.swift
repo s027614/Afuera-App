@@ -16,9 +16,9 @@ struct ListingsButton: View {
     var body: some View {
         NavigationLink(destination: ListingsView(listings: $listings, acceptedListings: $acceptedListings)) {
             Text("Listings Page")
-            .frame(width: 180)
+            .frame(width: 150)
             .padding(.vertical, 15)
-            .background(Color.blue)
+            .background(Color.green)
             .cornerRadius(8)
             .foregroundColor(.white)
         }

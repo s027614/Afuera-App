@@ -17,7 +17,7 @@ struct AcceptedListingsButton: View {
             Text("Accepted Listings")
             .frame(width: 180)
             .padding(.vertical, 15)
-            .background(Color.blue)
+            .background(Color.green)
             .cornerRadius(8)
             .foregroundColor(.white)
         }
