@@ -68,8 +68,9 @@ struct HomeView: View {
     }
     var body: some View {
             ZStack {
+                
                 //background
-                Image("backend-1").resizable().edgesIgnoringSafeArea(.all).aspectRatio(contentMode: .fill).frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.height, alignment: .bottom)
+                Image("backend-1")
                
             NavigationView{
                 VStack {
@@ -127,7 +128,7 @@ struct HomeView: View {
                     }.padding()
                     //Spacer()
                 }.sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
-                    ImagePicker(image: self.$inputImage)
+                    ImagePicker(image: self.$inputImage).background(Color("brown"))
                     
                     }
                     
