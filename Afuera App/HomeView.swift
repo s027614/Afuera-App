@@ -13,7 +13,7 @@ import FirebaseDatabase
 
 struct HomeView: View {
     @EnvironmentObject var userInfo: UserInfo
-    @State private var image: Image = Image("joe mama")
+    @State private var image: Image = Image("user")
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State var listings : [Listing] = [Listing(image: "yard work", name: "John Smith", email: "jsmith@gmail.com", experienceRequired: false, type: "Yard Work", hourlyRate: "$25", numberOfPeople: "1", isAccepted: false),
