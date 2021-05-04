@@ -28,7 +28,7 @@ struct CardView: View {
                         .foregroundColor(.orange)
                         .minimumScaleFactor(0.0001)
                         .lineLimit(1)
-                    Text(listing.email).font(.system(size: 30))
+                    Text(listing.email).font(.system(size: 20))
                         .minimumScaleFactor(0.0001)
                         .lineLimit(1)
                 }

@@ -57,14 +57,13 @@ struct ListingsView: View {
 
 struct ListingsView_Previews: PreviewProvider {
     static var previews: some View {
-        ListingsView(listings: Binding.constant([Listing(image: "joe mama", name: "Ben", email: "BenSmith@NewWaveComputers.com"),
-        Listing(image: "joe mama", name: "Aslan", email: "BenSmith@NewWaveComputers.com"),
-        Listing(image: "joe mama", name: "Humphrey", email: "BenSmith@NewWaveComputers.com"),
-        Listing(image: "joe mama", name: "Joseph", email: "BenSmith@NewWaveComputers.com"),
-        Listing(image: "joe mama", name: "Kelly", email: "BenSmith@NewWaveComputers.com"),
-        Listing(image: "joe mama", name: "Michael", email: "BenSmith@NewWaveComputers.com"),
-        Listing(image: "joe mama", name: "Prince", email: "BenSmith@NewWaveComputers.com"),
-        Listing(image: "joe mama", name: "Tyler", email: "BenSmith@NewWaveComputers.com")
+        ListingsView(listings: Binding.constant([Listing(image: "yard work", name: "John Smith", email: "jsmith@gmail.com", experienceRequired: false, type: "Yard Work", hourlyRate: "$25", numberOfPeople: "1", isAccepted: false),
+        Listing(image: "shoveling", name: "Jane Doe", email: "janedoe@icloud.com", experienceRequired: false, type: "Shoveling", hourlyRate: "$20", numberOfPeople: "2", isAccepted: false),
+        Listing(image: "pool care", name: "Thomas Brady", email: "tom@TB12.com", experienceRequired: true, type: "Pool Care", hourlyRate: "$100", numberOfPeople: "1", isAccepted: false),
+        Listing(image: "landscaping", name: "Joseph Johnson", email: "JJ@harvard.edu", experienceRequired: true, type: "Landscaping", hourlyRate: "$40", numberOfPeople: "3+", isAccepted: false),Listing(image: "christmas lights", name: "Kris Kringle", email: "SClaus@thenorthpole.com", experienceRequired: true, type: "Yard Christmas Lights", hourlyRate: "$42", numberOfPeople: "2", isAccepted: false),
+        Listing(image: "landscaping", name: "Lily Hobbs", email: "lilyhobbs@icloud.com", experienceRequired: true, type: "Landscaping", hourlyRate: "$35", numberOfPeople: "3+", isAccepted: false),
+        Listing(image: "pool care", name: "Luka Doncic", email: "luka@dallasmavs.com", experienceRequired: true, type: "Pool Care", hourlyRate: "$85", numberOfPeople: "2", isAccepted: false),
+        Listing(image: "yard work", name: "Cecilia Botwright", email: "CeceB@newwave.com", experienceRequired: false, type: "Yard Work", hourlyRate: "$24", numberOfPeople: "2", isAccepted: false)
             ].sorted(by: {$0.name < $1.name})), acceptedListings: Binding.constant([Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]))
     }
 }
