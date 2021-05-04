@@ -20,7 +20,7 @@ struct ListingsView: View {
         self.presentationMode.wrappedValue.dismiss()
     }) {
         HStack {
-            Text("")
+            Text("<— Back")
         }
         }
     }

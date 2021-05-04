@@ -19,7 +19,7 @@ struct AcceptedListingsView: View {
         self.presentationMode.wrappedValue.dismiss()
     }) {
         HStack {
-            Text("")
+            Text("<— Back")
         }
         }
     }
