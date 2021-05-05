@@ -24,11 +24,7 @@ struct ListingDetail: View {
     
     var body: some View {
         VStack {
-            Image("brown-1")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-               // .clipShape(Circle())
-                .frame(width: 100, height: 100, alignment: .center)
+
             
             Form {
                 Section {
@@ -36,7 +32,10 @@ struct ListingDetail: View {
                         .font(.system(size: 25))
                     TextField("Email Address", text: $listing.email)
                         .font(.system(size: 20))
+                    TextField("Zipcode", text: $listing.zipcode)
+                        .font(.system(size: 20))
                 }
+                
                 Section {
                     Toggle(isOn: $listing.experienceRequired) {
                         Text("Experience Required")
@@ -63,7 +62,7 @@ struct ListingDetail: View {
                 
 
             }) {
-                Text("Add Listing")
+                Text("+").font(.system(size: 30))
             }
         }
     }
@@ -71,9 +70,15 @@ struct ListingDetail: View {
 
 struct ListingDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ListingDetail(listing: Binding.constant(Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")), listings: Binding.constant([Listing(image: "yard work", name: "John Smith", email: "jsmith@gmail.com", experienceRequired: false, type: "Yard Work", hourlyRate: "$25", numberOfPeople: "1", isAccepted: false),
-        Listing(image: "shoveling", name: "Jane Doe", email: "janedoe@icloud.com", experienceRequired: false, type: "Shoveling", hourlyRate: "$20", numberOfPeople: "2", isAccepted: false),
-        Listing(image: "pool care", name: "Thomas Brady", email: "tom@TB12.com", experienceRequired: true, type: "Pool Care", hourlyRate: "$100", numberOfPeople: "1", isAccepted: false),
-        Listing(image: "landscaping", name: "Joseph Johnson", email: "JJ@harvard.edu", experienceRequired: true, type: "Landscaping", hourlyRate: "$40", numberOfPeople: "3+", isAccepted: false),Listing(image: "christmas lights", name: "Kris Kringle", email: "SClaus@thenorthpole.com", experienceRequired: true, type: "Yard Christmas Lights", hourlyRate: "$42", numberOfPeople: "2", isAccepted: false)]))
+        ListingDetail(listing: Binding.constant(Listing(image: "joe mama", name: "ben", email: "ben@ben.ben")), listings: Binding.constant([
+        Listing(image: "yard work", name: "John Smith", email: "jsmith@gmail.com", zipcode: "19003", experienceRequired: false, type: "Yard Work", hourlyRate: "$25", numberOfPeople: "1", isAccepted: false),
+        Listing(image: "shoveling", name: "Jane Doe", email: "janedoe@icloud.com", zipcode: "12345", experienceRequired: false, type: "Shoveling", hourlyRate: "$20", numberOfPeople: "2", isAccepted: false),
+        Listing(image: "pool care", name: "Thomas Brady", email: "tom@TB12.com", zipcode: "13047", experienceRequired: true, type: "Pool Care", hourlyRate: "$100", numberOfPeople: "1", isAccepted: false),
+        Listing(image: "landscaping", name: "Joseph Johnson", email: "JJ@harvard.edu", zipcode: "02378", experienceRequired: true, type: "Landscaping", hourlyRate: "$40", numberOfPeople: "3+", isAccepted: false),
+        Listing(image: "christmas lights", name: "Kris Kringle", email: "SClaus@thenorthpole.com", zipcode: "00001", experienceRequired: true, type: "Yard Christmas Lights", hourlyRate: "$42", numberOfPeople: "2", isAccepted: false),
+        Listing(image: "landscaping", name: "Lily Hobbs", email: "lilyhobbs@icloud.com", zipcode: "19096", experienceRequired: true, type: "Landscaping", hourlyRate: "$35", numberOfPeople: "3+", isAccepted: false),
+        Listing(image: "pool care", name: "Luka Doncic", email: "luka@dallasmavs.com", zipcode: "59086", experienceRequired: true, type: "Pool Care", hourlyRate: "$85", numberOfPeople: "2", isAccepted: false),
+        Listing(image: "yard work", name: "Cecilia Botwright", email: "CeceB@newwave.com", zipcode: "32089", experienceRequired: false, type: "Yard Work", hourlyRate: "$24", numberOfPeople: "2", isAccepted: false)]))
     }
 }
+

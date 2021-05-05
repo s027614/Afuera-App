@@ -55,6 +55,6 @@ struct AcceptedListingsView: View {
 
 struct AcceptedListingsView_Previews: PreviewProvider {
     static var previews: some View {
-        AcceptedListingsView(acceptedListings: Binding.constant([Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]))
+        AcceptedListingsView(acceptedListings: Binding.constant([Listing(image: "user", name: "John Doe", email: "jonnydoe@gmail.com")]))
     }
 }
