@@ -24,11 +24,11 @@ struct CardView: View {
 
             NavigationLink(destination: ListingDetailUneditable(listing: self.$listing, listings : self.$listings, acceptedListings: self.$acceptedListings)) {
                 VStack(alignment: .leading){
-                    Text("\(listing.type) for \(listing.name)").font(.system(size: 25))
-                        .foregroundColor(Color("greeeny"))
+                    Text("\(listing.type) for \(listing.name)").font(.system(size: 25)).bold()
+                        .foregroundColor(Color.green)
                         .minimumScaleFactor(0.0001)
                         .lineLimit(1).foregroundColor(Color("Brown"))
-                    Text(listing.email).font(.system(size: 20))
+                    Text("\(listing.address)").font(.system(size: 20))
                         .minimumScaleFactor(0.0001)
                         .lineLimit(1)
                 }

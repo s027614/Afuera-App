@@ -32,6 +32,8 @@ struct ListingDetail: View {
                         .font(.system(size: 25))
                     TextField("Email Address", text: $listing.email)
                         .font(.system(size: 20))
+                    TextField("Address", text: $listing.address)
+                                       .font(.system(size: 20))
                     TextField("Zipcode", text: $listing.zipcode)
                         .font(.system(size: 20))
                 }

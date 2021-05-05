@@ -69,6 +69,8 @@ struct ListingDetailUneditable: View {
                         .font(.system(size: 30))
                     Text("Email: \(self.listing.email)")
                         .font(.system(size: 20))
+                    Text("Address: \(self.listing.address)")
+                                           .font(.system(size: 20))
                     Text("Zipcode: \(self.listing.zipcode)")
                         .font(.system(size: 20))
                 }
