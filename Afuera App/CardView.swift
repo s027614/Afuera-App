@@ -25,15 +25,15 @@ struct CardView: View {
             NavigationLink(destination: ListingDetailUneditable(listing: self.$listing, listings : self.$listings, acceptedListings: self.$acceptedListings)) {
                 VStack(alignment: .leading){
                     Text("\(listing.type) for \(listing.name)").font(.system(size: 25))
-                        .foregroundColor(.orange)
+                        .foregroundColor(Color("greeeny"))
                         .minimumScaleFactor(0.0001)
-                        .lineLimit(1).foregroundColor(Color.blue)
+                        .lineLimit(1).foregroundColor(Color("Brown"))
                     Text(listing.email).font(.system(size: 20))
                         .minimumScaleFactor(0.0001)
                         .lineLimit(1)
                 }
             }
-        }.background(Color.white.opacity(0.7)).cornerRadius(20).cornerRadius(20)
+        }.background(Color("brown").opacity(0.7)).cornerRadius(20).cornerRadius(20)
             .padding(.horizontal, 10)
     }
 }

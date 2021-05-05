@@ -76,7 +76,8 @@ struct HomeView: View {
                
             NavigationView{
                 VStack {
-                     Image("brown-1").resizable().aspectRatio(contentMode: .fit).padding(.all, 7.0)
+                     Image("brown-1").resizable().aspectRatio(contentMode: .fit).padding(.all, 2.0)
+
                     //Spacer()
                     image
                         .resizable()

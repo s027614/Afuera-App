@@ -62,7 +62,7 @@ struct ListingDetail: View {
                 
 
             }) {
-                Text("+").font(.system(size: 30))
+                Text("+").font(.system(size: 30)).foregroundColor(.green)
             }
         }
     }
