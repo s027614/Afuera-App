@@ -21,7 +21,7 @@ class Listing : Identifiable{
 
 
 
-    init(image : String = "user", name : String = "name", email : String = "email", zipcode: String = "zipcode",experienceRequired : Bool  = false, type : String = "type", hourlyRate : String = "pay rate", numberOfPeople : String = "# of people", isAccepted : Bool = false){
+    init(image : String = "user", name : String = "Name", email : String = "Email", zipcode: String = "Zipcode",experienceRequired : Bool  = false, type : String = "type", hourlyRate : String = "Pay Rate", numberOfPeople : String = "# of people", isAccepted : Bool = false){
         self.image = image
         self.name = name
         self.email = email
