@@ -2,8 +2,8 @@
 //  CardView.swift
 //  Contacts
 //
-//  Created by Swope, Thomas on 12/9/20.
-//  Copyright © 2020 Swope, Thomas. All rights reserved.
+//  Created by Ginzburg, Elliot on 4/4/21.
+//  Copyright © 2020 Ginzburg, Elliot. All rights reserved.
 //
 
 import SwiftUI
@@ -27,7 +27,7 @@ struct CardView: View {
                     Text("\(listing.type) for \(listing.name)").font(.system(size: 25))
                         .foregroundColor(.orange)
                         .minimumScaleFactor(0.0001)
-                        .lineLimit(1)
+                        .lineLimit(1).foregroundColor(Color.blue)
                     Text(listing.email).font(.system(size: 20))
                         .minimumScaleFactor(0.0001)
                         .lineLimit(1)

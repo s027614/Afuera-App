@@ -2,8 +2,8 @@
 //  ListingDetail.swift
 //  Contacts
 //
-//  Created by Lincoln Blouin (student LM) on 12/15/20.
-//  Copyright © 2020 Swope, Thomas. All rights reserved.
+//  Created by Ginzburg, Elliot on 4/12/21.
+//  Copyright © 2020 Ginzburg, Elliot. All rights reserved.
 //
 
 import SwiftUI

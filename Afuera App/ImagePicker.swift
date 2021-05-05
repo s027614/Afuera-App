@@ -2,8 +2,8 @@
 //  ImagePicker.swift
 //  FireDrill
 //
-//  Created by Swope, Thomas on 2/24/21.
-//  Copyright © 2021 Swope, Thomas. All rights reserved.
+//  Created by Ginzburg, Elliot on 4/12/21.
+//  Copyright © 2020 Ginzburg, Elliot. All rights reserved.
 //
 
 import SwiftUI

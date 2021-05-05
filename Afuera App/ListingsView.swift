@@ -2,8 +2,8 @@
 //  ListingsView.swift
 //  Contacts
 //
-//  Created by Swope, Thomas on 12/4/20.
-//  Copyright © 2020 Swope, Thomas. All rights reserved.
+//  Created by Ginzburg, Elliot on 4/4/21.
+//  Copyright © 2020 Ginzburg, Elliot. All rights reserved.
 //
 
 import SwiftUI

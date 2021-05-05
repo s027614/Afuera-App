@@ -63,7 +63,7 @@ struct ListingDetail: View {
                 
 
             }) {
-                Text("Add Button")
+                Text("Add Listing")
             }
         }
     }
