@@ -71,13 +71,15 @@ struct HomeView: View {
     var body: some View {
            
         ZStack {
-                
+               
                 //background
                 Image("backend-1")
                
             NavigationView{
+                ZStack{
+                    // Color.init("brown").edgesIgnoringSafeArea(.all).opacity(0.6)
                 VStack {
-                    
+                   
                      Image("brown-1").resizable().aspectRatio(contentMode: .fit).padding(.all, 2.0)
 
                     //Spacer()
@@ -145,15 +147,16 @@ struct HomeView: View {
                         
                     }.padding()
                     
-                }.background(Color("brown").opacity(0.6).cornerRadius(20))
+                }
                 .sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
                     ImagePicker(image: self.$inputImage).background(Color("brown"))
                     
                     }
                     
                 }
-        }
+            }
             
+    }
     }
         
 }

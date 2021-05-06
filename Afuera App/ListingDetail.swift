@@ -47,24 +47,45 @@ struct ListingDetail: View {
                     Toggle(isOn: $listing.experienceRequired) {
                         Text("Experience Required")
                     }
-                    Picker(selection: $listing.type, label: Text("Activity Type")) {
-                        ForEach(0..<activityTypeOptions.count) { i in
-                            Text(self.activityTypeOptions[i])
-                        }
-                    }
+                    TextField("Type", text: $listing.type)
+                    .font(.system(size: 20))
+                    
                 }
                 
                 Section {
                     TextField("Payment", text: $listing.hourlyRate)
                         .keyboardType(.decimalPad)
-                    Picker(selection: $listing.type, label: Text("Number of People Needed")) {
-                        ForEach(0..<numberOfPeopleOptions.count) { i in
-                            Text(self.numberOfPeopleOptions[i])
-                        }
-                    }
+                    TextField("People Needed", text: $listing.numberOfPeople)
+                        .keyboardType(.decimalPad)
+                    
+                    
                 }
             }
             Button(action: {
+                if self.listing.type == "Yard Work"{
+                          
+                self.listing.image = "yard work"
+                      }
+                      
+                      else if self.listing.type == "Shoveling"{
+                          
+                      self.listing.image = "shoveling"
+                      }
+                      
+                      else if self.listing.type == "Pool Care"{
+                          
+                    self.listing.image = "pool care"
+                      }
+                       
+                       else if self.listing.type == "Christmas Lights"{
+                           
+                       self.listing.image = "christmas lights"
+                       }
+                       
+                       else if self.listing.type == "Landscaping"{
+                           
+                       self.listing.image = "landscaping"
+                       }
                 self.listings.append(self.listing)
                 
 
