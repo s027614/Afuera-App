@@ -87,13 +87,19 @@ struct HomeView: View {
                         .clipped()
                         .cornerRadius(200)
                         
+                    HStack{
                     Text("Lincoln Blouin")
                         
                     Text("1234 Main Street")
                     
                     Text("19003")
+                    }.padding(.vertical, 10)
                     
-                    Text("$\(moneyEarned)")
+                    
+                    Text("$\(moneyEarned)").frame(width: 80)
+                    .background(Color.green)
+                    .cornerRadius(8)
+                    .foregroundColor(.white)
                     
                     
                     Button(action: {
@@ -101,7 +107,7 @@ struct HomeView: View {
                     }) {
                         Text("Change Image")
                             .frame(width: 120)
-                            .padding(.vertical, 15)
+                            .padding(.vertical, 10)
                             .background(Color.green)
                             .cornerRadius(8)
                             .foregroundColor(.white)
@@ -112,10 +118,10 @@ struct HomeView: View {
 
                     
                     ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings, moneyEarned: self.$moneyEarned)
-                            .padding()
+                            .padding(.vertical, 10)
                             
                     AcceptedListingsButton(acceptedListings: self.$acceptedListings,moneyEarned: self.$moneyEarned)
-                            .padding()
+                            .padding(.vertical, 10)
                         
                     
                     
@@ -129,13 +135,13 @@ struct HomeView: View {
                     }) {
                         Text("Log Out")
                             .frame(width: 80)
-                            .padding(.vertical, 15)
+                            .padding(.vertical, 10)
                             .background(Color("brown"))
                             .cornerRadius(8)
                             .foregroundColor(.white)
                         
                     }.padding()
-                    //Spacer()
+                    
                 }.background(Color("brown").opacity(0.6).cornerRadius(20))
                 .sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
                     ImagePicker(image: self.$inputImage).background(Color("brown"))
