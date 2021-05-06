@@ -25,6 +25,11 @@ struct ListingDetail: View {
     var body: some View {
         VStack {
 
+            Text("   Request Help:   ")
+            .font(.system(size: 30))
+            .foregroundColor(Color("greeny"))
+            .minimumScaleFactor(0.0001)
+                .background(Color("brown").opacity(0.6).cornerRadius(20))
             
             Form {
                 Section {

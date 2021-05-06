@@ -69,7 +69,8 @@ struct HomeView: View {
         }
     }
     var body: some View {
-            ZStack {
+           
+        ZStack {
                 
                 //background
                 Image("backend-1")
@@ -134,7 +135,8 @@ struct HomeView: View {
                         
                     }.padding()
                     //Spacer()
-                }.sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
+                }.background(Color("brown").opacity(0.6).cornerRadius(20))
+                .sheet(isPresented: $showingImagePicker, onDismiss: saveImage) {
                     ImagePicker(image: self.$inputImage).background(Color("brown"))
                     
                     }
