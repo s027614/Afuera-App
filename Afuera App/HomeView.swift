@@ -17,20 +17,20 @@ struct HomeView: View {
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
     @State var listings : [Listing] = [
-        Listing(image: "yard work", name: "John Smith", email: "jsmith@gmail.com", address: "407 Fig Street", zipcode: "19003", experienceRequired: false, type: "Yard Work", hourlyRate: "$25", numberOfPeople: "1", isAccepted: false),
-    Listing(image: "shoveling", name: "Jane Doe", email: "janedoe@icloud.com", address: "40 Apple Street", zipcode: "12345", experienceRequired: false, type: "Shoveling", hourlyRate: "$20", numberOfPeople: "2", isAccepted: false),
-    Listing(image: "pool care", name: "Tomé Brady", email: "tom@tb12.com", address: "20 Plum Street", zipcode: "13047", experienceRequired: true, type: "Pool Care", hourlyRate: "$100", numberOfPeople: "1", isAccepted: false),
-    Listing(image: "landscaping", name: "Jose John", email: "jj@harvard.edu", address: "4094 Pear Street", zipcode: "02378", experienceRequired: true, type: "Landscaping", hourlyRate: "$40", numberOfPeople: "3+", isAccepted: false),
-    Listing(image: "christmas lights", name: "Kris Kring", email: "sclaus@thenorthpole.com", address: "12 Cherry Street", zipcode: "00001", experienceRequired: true, type: "Christmas Lights", hourlyRate: "$42", numberOfPeople: "2", isAccepted: false),
-    Listing(image: "landscaping", name: "Lily Hobbs", email: "lilyhobbs@icloud.com", address: "423 Pop Street", zipcode: "19096", experienceRequired: true, type: "Landscaping", hourlyRate: "$35", numberOfPeople: "3+", isAccepted: false),
-    Listing(image: "pool care", name: "Luka Donci", email: "luka@dallasmavs.com", address: "665 Yum Street", zipcode: "59086", experienceRequired: true, type: "Pool Care", hourlyRate: "$85", numberOfPeople: "2", isAccepted: false),
-    Listing(image: "yard work", name: "Cecilia Bon", email: "CeceB@newwave.com", address: "33 Besties Street", zipcode: "32089", experienceRequired: false, type: "Yard Work", hourlyRate: "$24", numberOfPeople: "2", isAccepted: false)      ].sorted(by: {$0.name < $1.name})
+        Listing(image: "yard work", name: "John Smith", email: "jsmith@gmail.com", address: "407 Fig Street", zipcode: "19003", experienceRequired: false, type: "Yard Work", hourlyRate: "25", numberOfPeople: "1", isAccepted: false, isComplete: false),
+    Listing(image: "shoveling", name: "Jane Doe", email: "janedoe@icloud.com", address: "40 Apple Street", zipcode: "12345", experienceRequired: false, type: "Shoveling", hourlyRate: "20", numberOfPeople: "2", isAccepted: false, isComplete: false),
+    Listing(image: "pool care", name: "Tomé Brady", email: "tom@tb12.com", address: "20 Plum Street", zipcode: "13047", experienceRequired: true, type: "Pool Care", hourlyRate: "100", numberOfPeople: "1", isAccepted: false, isComplete: false),
+    Listing(image: "landscaping", name: "Jose John", email: "jj@harvard.edu", address: "4094 Pear Street", zipcode: "02378", experienceRequired: true, type: "Landscaping", hourlyRate: "40", numberOfPeople: "3+", isAccepted: false, isComplete: false),
+    Listing(image: "christmas lights", name: "Kris Kring", email: "sclaus@thenorthpole.com", address: "12 Cherry Street", zipcode: "00001", experienceRequired: true, type: "Christmas Lights", hourlyRate: "42", numberOfPeople: "2", isAccepted: false, isComplete: false),
+    Listing(image: "landscaping", name: "Lily Hobbs", email: "lilyhobbs@icloud.com", address: "423 Pop Street", zipcode: "19096", experienceRequired: true, type: "Landscaping", hourlyRate: "35", numberOfPeople: "3+", isAccepted: false, isComplete: false),
+    Listing(image: "pool care", name: "Luka Donci", email: "luka@dallasmavs.com", address: "665 Yum Street", zipcode: "59086", experienceRequired: true, type: "Pool Care", hourlyRate: "85", numberOfPeople: "2", isAccepted: false, isComplete: false),
+    Listing(image: "yard work", name: "Cecilia Bon", email: "CeceB@newwave.com", address: "33 Besties Street", zipcode: "32089", experienceRequired: false, type: "Yard Work", hourlyRate: "24", numberOfPeople: "2", isAccepted: false, isComplete: false)      ].sorted(by: {$0.name < $1.name})
     @State var acceptedListings : [Listing] = []
     
     @EnvironmentObject var user: UserViewModel
     
     
-   
+    @State var moneyEarned : Int = 0
     
     
     
@@ -93,6 +93,7 @@ struct HomeView: View {
                     
                     Text("19003")
                     
+                    Text("$\(moneyEarned)")
                     
                     
                     Button(action: {
@@ -110,10 +111,10 @@ struct HomeView: View {
                     
 
                     
-                        ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings)
+                    ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings, moneyEarned: self.$moneyEarned)
                             .padding()
                             
-                        AcceptedListingsButton(acceptedListings: self.$acceptedListings)
+                    AcceptedListingsButton(acceptedListings: self.$acceptedListings,moneyEarned: self.$moneyEarned)
                             .padding()
                         
                     

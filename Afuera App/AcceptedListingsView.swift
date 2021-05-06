@@ -11,6 +11,7 @@ import SwiftUI
 struct AcceptedListingsView: View {
     
     @Binding var acceptedListings : [Listing]
+    @Binding var moneyEarned : Int
      @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @GestureState private var dragOffset = CGSize.zero
 
@@ -33,7 +34,7 @@ struct AcceptedListingsView: View {
                 List{
                     
                     ForEach(0..<acceptedListings.count) { value in
-                        CardView(listing: self.$acceptedListings[value], listings: self.$acceptedListings, acceptedListings: self.$acceptedListings)
+                        CardView(listing: self.$acceptedListings[value], listings: self.$acceptedListings, acceptedListings: self.$acceptedListings, moneyEarned: self.$moneyEarned)
                     }
                     }
                 }.navigationBarTitle("Your Listings").navigationBarBackButtonHidden(true)
@@ -55,6 +56,6 @@ struct AcceptedListingsView: View {
 
 struct AcceptedListingsView_Previews: PreviewProvider {
     static var previews: some View {
-        AcceptedListingsView(acceptedListings: Binding.constant([Listing(image: "user", name: "John Doe", email: "jonnydoe@gmail.com")]))
+        AcceptedListingsView(acceptedListings: Binding.constant([Listing(image: "user", name: "John Doe", email: "jonnydoe@gmail.com")]), moneyEarned: Binding.constant(1000))
     }
 }

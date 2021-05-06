@@ -13,6 +13,7 @@ struct CardView: View {
     @Binding var listing : Listing
     @Binding var listings : [Listing]
     @Binding var acceptedListings : [Listing]
+    @Binding var moneyEarned : Int
     
     var body: some View {
         HStack{
@@ -22,7 +23,7 @@ struct CardView: View {
                 .frame(width: 100, height: 100, alignment: .center)
                 .clipped()
 
-            NavigationLink(destination: ListingDetailUneditable(listing: self.$listing, listings : self.$listings, acceptedListings: self.$acceptedListings)) {
+            NavigationLink(destination: ListingDetailUneditable(listing: self.$listing, listings : self.$listings, acceptedListings: self.$acceptedListings, moneyEarned: self.$moneyEarned)) {
                 VStack(alignment: .leading){
                     Text("\(listing.type) for \(listing.name)").font(.system(size: 25)).bold()
                         .foregroundColor(Color.green)
@@ -41,6 +42,6 @@ struct CardView: View {
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
-        CardView(listing: Binding.constant(Listing(image: "joe mama", name: "Ben", email: "BenSmith@NewWaveComputers.com")), listings: Binding.constant([Listing(image: "ben", name: "Ben", email: "BenSmith@NewWaveComputers.com")]), acceptedListings: Binding.constant([Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]))
+        CardView(listing: Binding.constant(Listing(image: "joe mama", name: "Ben", email: "BenSmith@NewWaveComputers.com")), listings: Binding.constant([Listing(image: "ben", name: "Ben", email: "BenSmith@NewWaveComputers.com")]), acceptedListings: Binding.constant([Listing(image: "joe mama", name: "joe mama", email: "joemama@gmail.com")]), moneyEarned: Binding.constant(1000))
     }
 }

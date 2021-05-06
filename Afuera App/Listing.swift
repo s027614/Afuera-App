@@ -19,9 +19,10 @@ class Listing : Identifiable{
     var hourlyRate : String
     var numberOfPeople : String
     var isAccepted : Bool
+    var isComplete : Bool
 
 
-    init(image : String = "user", name : String = "Name", email : String = "Email", address: String = "Address", zipcode: String = "Zipcode",experienceRequired : Bool  = false, type : String = "type", hourlyRate : String = "Pay Rate", numberOfPeople : String = "# of people", isAccepted : Bool = false){
+    init(image : String = "user", name : String = "Name", email : String = "Email", address: String = "Address", zipcode: String = "Zipcode",experienceRequired : Bool  = false, type : String = "type", hourlyRate : String = "", numberOfPeople : String = "# of people", isAccepted : Bool = false, isComplete : Bool = false){
         self.image = image
         self.name = name
         self.email = email
@@ -32,5 +33,6 @@ class Listing : Identifiable{
         self.hourlyRate = hourlyRate
         self.numberOfPeople = numberOfPeople
         self.isAccepted = isAccepted
+        self.isComplete = isComplete
     }
 }
