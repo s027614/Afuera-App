@@ -85,7 +85,7 @@ struct ListingDetailUneditable: View {
                 }
                 
                 Section {
-                    Text("Hourly Pay Rate: \(self.listing.hourlyRate)")
+                    Text("Payment: \(self.listing.hourlyRate)")
                     Text("Number of People Needed: \(self.listing.numberOfPeople)")
                 }
             }
