@@ -16,6 +16,8 @@ struct HomeView: View {
     @State private var image: Image = Image("user")
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
+    
+    //creates each established user; image of the job, name, email, zip, address, num of people is included
     @State var listings : [Listing] = [
         Listing(image: "yard work", name: "John Smith", email: "jsmith@gmail.com", address: "407 Fig Street", zipcode: "19003", experienceRequired: false, type: "Yard Work", hourlyRate: "25", numberOfPeople: "1", isAccepted: false, isComplete: false),
     Listing(image: "shoveling", name: "Jane Doe", email: "janedoe@icloud.com", address: "40 Apple Street", zipcode: "12345", experienceRequired: false, type: "Shoveling", hourlyRate: "20", numberOfPeople: "2", isAccepted: false, isComplete: false),
@@ -72,14 +74,14 @@ struct HomeView: View {
            
         ZStack {
                
-                //background
+                //background image - not displaying
                 Image("backend-1")
                
             NavigationView{
                 ZStack{
                     // Color.init("brown").edgesIgnoringSafeArea(.all).opacity(0.6)
                 VStack {
-                   
+                   //image of logo at top of home screen
                      Image("brown-1").resizable().aspectRatio(contentMode: .fit).padding(.all, 2.0)
 
                     //Spacer()
@@ -89,7 +91,8 @@ struct HomeView: View {
                         .frame(width: 150, height: 150, alignment: .center)
                         .clipped()
                         .cornerRadius(200)
-                        
+                     
+                    //user name and address
                     HStack{
                     Text("")
                     .padding(.vertical, 10)
@@ -100,13 +103,13 @@ struct HomeView: View {
                     Text("19003")
                     }.padding(.vertical, 10)
                     
-                    
+                    //earned box - top of the tree
                     Text("$\(moneyEarned)").frame(width: 80)
                     .background(Color.green)
                     .cornerRadius(8)
                     .foregroundColor(.white)
                     
-                    
+                    //change image button
                     Button(action: {
                         self.showingImagePicker = true
                     }) {
@@ -121,10 +124,10 @@ struct HomeView: View {
                     
                     
 
-                    
+                    //listing button
                     ListingsButton(listings: self.$listings, acceptedListings: self.$acceptedListings, moneyEarned: self.$moneyEarned)
                             .padding(.vertical, 10)
-                            
+                    //accepted listings button
                     AcceptedListingsButton(acceptedListings: self.$acceptedListings,moneyEarned: self.$moneyEarned)
                             .padding(.vertical, 10)
                         
@@ -133,7 +136,7 @@ struct HomeView: View {
                     //Spacer()
                     
                     
-                    
+                    //log out button
                     Button(action: {
                         try! Auth.auth().signOut()
                         self.userInfo.configureFirebaseStateDidChange()
