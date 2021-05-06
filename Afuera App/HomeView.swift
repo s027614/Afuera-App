@@ -77,6 +77,7 @@ struct HomeView: View {
                
             NavigationView{
                 VStack {
+                    
                      Image("brown-1").resizable().aspectRatio(contentMode: .fit).padding(.all, 2.0)
 
                     //Spacer()
@@ -88,6 +89,8 @@ struct HomeView: View {
                         .cornerRadius(200)
                         
                     HStack{
+                    Text("")
+                    .padding(.vertical, 10)
                     Text("Lincoln Blouin")
                         
                     Text("1234 Main Street")

@@ -55,7 +55,7 @@ struct ListingDetail: View {
                 }
                 
                 Section {
-                    TextField("Hourly Pay Rate", text: $listing.hourlyRate)
+                    TextField("Payment", text: $listing.hourlyRate)
                         .keyboardType(.decimalPad)
                     Picker(selection: $listing.type, label: Text("Number of People Needed")) {
                         ForEach(0..<numberOfPeopleOptions.count) { i in
