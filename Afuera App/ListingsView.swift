@@ -40,7 +40,7 @@ struct ListingsView: View {
                 }
                     
                 }.navigationBarTitle("Listings").navigationBarBackButtonHidden(true)
-                    .navigationBarItems(leading: btnBack)
+                .navigationBarItems(leading: btnBack).background(Color.blue)
                     .gesture(DragGesture().updating($dragOffset, body: { (value, state, transaction) in
                         if(value.startLocation.x < 20 &&
                             value.translation.width > 100) {

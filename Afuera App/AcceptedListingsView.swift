@@ -48,6 +48,16 @@ struct AcceptedListingsView: View {
                         
                 )
                // .navigationBarItems(trailing: AddButton(listings: $listings))
+            
+           
+                Button(action: {
+               //     self.listings.remove(at: 1)
+                    self.presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text("Job Completed")
+                }
+
+            
         }
     }
 }
